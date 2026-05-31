@@ -1,0 +1,5528 @@
+[
+  {
+    "id": 1,
+    "term": "checkout",
+    "fullName": "git checkout",
+    "category": "编程开发",
+    "meaning": "切换分支 / 检出代码",
+    "scene": "你先 checkout 到 develop 分支，我这边代码合进去了你再切回来。",
+    "aliases": [
+      "check out"
+    ],
+    "related": [
+      "branch",
+      "merge",
+      "clone"
+    ]
+  },
+  {
+    "id": 2,
+    "term": "commit",
+    "fullName": "git commit",
+    "category": "编程开发",
+    "meaning": "提交代码变更到本地仓库",
+    "scene": "这个 bug 修完了，我先 commit 一下，等全部改完再一起 push。",
+    "aliases": [
+      "提交"
+    ],
+    "related": [
+      "push",
+      "merge",
+      "stash"
+    ]
+  },
+  {
+    "id": 3,
+    "term": "merge",
+    "fullName": "git merge",
+    "category": "编程开发",
+    "meaning": "合并分支代码",
+    "scene": "你把 feature 分支 merge 到 develop 的时候冲突了，过来一起看下怎么解决。",
+    "aliases": [
+      "合并"
+    ],
+    "related": [
+      "branch",
+      "commit",
+      "rebase",
+      "conflict"
+    ]
+  },
+  {
+    "id": 4,
+    "term": "rebase",
+    "fullName": "git rebase",
+    "category": "编程开发",
+    "meaning": "变基，将当前分支的提交重新应用到目标分支的最新提交之上",
+    "scene": "别直接 merge，先 rebase 一下 develop 分支，保持提交历史干净。",
+    "aliases": [
+      "变基"
+    ],
+    "related": [
+      "merge",
+      "commit",
+      "squash",
+      "conflict"
+    ],
+    "note": "rebase 会改写提交历史，已经 push 到公共分支的不要 rebase"
+  },
+  {
+    "id": 5,
+    "term": "branch",
+    "fullName": "git branch",
+    "category": "编程开发",
+    "meaning": "分支，代码的独立开发线",
+    "scene": "每个需求开一个 feature branch，别直接在 develop 上改代码。",
+    "aliases": [
+      "分支"
+    ],
+    "related": [
+      "checkout",
+      "merge",
+      "PR"
+    ]
+  },
+  {
+    "id": 6,
+    "term": "push",
+    "fullName": "git push",
+    "category": "编程开发",
+    "meaning": "将本地提交推送到远程仓库",
+    "scene": "改完了就 push 上去，我好 review 你的代码。",
+    "aliases": [
+      "推送",
+      "推到远程"
+    ],
+    "related": [
+      "commit",
+      "pull",
+      "PR"
+    ]
+  },
+  {
+    "id": 7,
+    "term": "pull",
+    "fullName": "git pull",
+    "category": "编程开发",
+    "meaning": "从远程仓库拉取最新代码并合并到本地",
+    "scene": "早上来先 pull 一下，看看昨晚有没有人合了代码。",
+    "aliases": [
+      "拉取",
+      "拉代码"
+    ],
+    "related": [
+      "push",
+      "fetch",
+      "merge"
+    ]
+  },
+  {
+    "id": 8,
+    "term": "clone",
+    "fullName": "git clone",
+    "category": "编程开发",
+    "meaning": "克隆远程仓库到本地",
+    "scene": "入职第一天先把项目 clone 下来，然后配一下本地环境。",
+    "aliases": [
+      "克隆"
+    ],
+    "related": [
+      "checkout",
+      "pull"
+    ]
+  },
+  {
+    "id": 9,
+    "term": "fork",
+    "fullName": "git fork",
+    "category": "编程开发",
+    "meaning": "将别人的仓库复制到自己账号下，独立开发",
+    "scene": "开源项目一般先 fork 到自己的仓库，改完了再提 PR 回原仓库。",
+    "aliases": [
+      "复刻"
+    ],
+    "related": [
+      "clone",
+      "PR",
+      "upstream"
+    ]
+  },
+  {
+    "id": 10,
+    "term": "stash",
+    "fullName": "git stash",
+    "category": "编程开发",
+    "meaning": "暂存当前未提交的修改，让工作区变干净",
+    "scene": "我代码改一半要切分支修个线上 bug，先 stash 一下，回来再 pop。",
+    "aliases": [
+      "暂存"
+    ],
+    "related": [
+      "commit",
+      "checkout"
+    ]
+  },
+  {
+    "id": 11,
+    "term": "conflict",
+    "fullName": "merge conflict",
+    "category": "编程开发",
+    "meaning": "代码合并冲突，两个分支修改了同一处代码",
+    "scene": "merge 的时候 conflict 了，你来看看保留谁的版本，还是两个都要。",
+    "aliases": [
+      "冲突",
+      "合并冲突"
+    ],
+    "related": [
+      "merge",
+      "rebase",
+      "resolve"
+    ]
+  },
+  {
+    "id": 12,
+    "term": "PR",
+    "fullName": "Pull Request",
+    "category": "编程开发",
+    "meaning": "拉取请求，请求将你的代码变更合并到目标分支",
+    "scene": "代码写完了，提个 PR 吧，我 review 完就合进去。",
+    "aliases": [
+      "pull request",
+      "MR"
+    ],
+    "related": [
+      "review",
+      "merge",
+      "branch"
+    ],
+    "note": "GitHub 叫 Pull Request，GitLab 叫 Merge Request (MR)，是一回事"
+  },
+  {
+    "id": 13,
+    "term": "review",
+    "fullName": "code review",
+    "category": "编程开发",
+    "meaning": "代码审查，同事检查你的代码质量和逻辑",
+    "scene": "这个 PR 的 review 过了吗？没过 review 不能 merge。",
+    "aliases": [
+      "CR",
+      "代码审查"
+    ],
+    "related": [
+      "PR",
+      "LGTM",
+      "merge"
+    ]
+  },
+  {
+    "id": 14,
+    "term": "QA",
+    "fullName": "Quality Assurance",
+    "category": "编程开发",
+    "meaning": "质量保证 / 测试人员",
+    "scene": "代码提测了，等 QA 过了这周五就能上线。",
+    "aliases": [
+      "测试",
+      "质量保证"
+    ],
+    "related": [
+      "UAT",
+      "bug",
+      "deploy"
+    ]
+  },
+  {
+    "id": 15,
+    "term": "UAT",
+    "fullName": "User Acceptance Testing",
+    "category": "编程开发",
+    "meaning": "用户验收测试，上线前让业务方或真实用户验证",
+    "scene": "QA 已经过了，等明天 UAT 验收完就能发布。",
+    "aliases": [
+      "验收测试"
+    ],
+    "related": [
+      "QA",
+      "deploy",
+      "staging"
+    ]
+  },
+  {
+    "id": 16,
+    "term": "deploy",
+    "fullName": "deploy",
+    "category": "编程开发",
+    "meaning": "部署，将代码发布到服务器上",
+    "scene": "今晚 10 点 deploy 新版本，大家注意不要再往 release 分支合代码了。",
+    "aliases": [
+      "部署",
+      "上线",
+      "发布",
+      "release"
+    ],
+    "related": [
+      "rollback",
+      "hotfix",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": 17,
+    "term": "rollback",
+    "fullName": "rollback",
+    "category": "编程开发",
+    "meaning": "回滚，将系统恢复到上一个版本",
+    "scene": "上线后发现订单接口挂了，赶紧 rollback 到上一个稳定版本。",
+    "aliases": [
+      "回滚",
+      "回退"
+    ],
+    "related": [
+      "deploy",
+      "hotfix",
+      "revert"
+    ]
+  },
+  {
+    "id": 18,
+    "term": "hotfix",
+    "fullName": "hotfix",
+    "category": "编程开发",
+    "meaning": "紧急修复线上问题的补丁",
+    "scene": "线上支付回调出问题了，从 master 拉个 hotfix 分支紧急修复。",
+    "aliases": [
+      "紧急修复",
+      "线上补丁"
+    ],
+    "related": [
+      "deploy",
+      "bug",
+      "rollback"
+    ]
+  },
+  {
+    "id": 19,
+    "term": "sprint",
+    "fullName": "sprint",
+    "category": "编程开发",
+    "meaning": "敏捷开发中的一个迭代周期（通常 1-2 周）",
+    "scene": "这个需求排不进这个 sprint 了，放到下个 sprint 吧。",
+    "aliases": [
+      "迭代"
+    ],
+    "related": [
+      "scrum",
+      "standup",
+      "backlog"
+    ]
+  },
+  {
+    "id": 20,
+    "term": "staging",
+    "fullName": "staging environment",
+    "category": "编程开发",
+    "meaning": "预发布环境，模拟线上环境的测试服务器",
+    "scene": "先在 staging 环境验证一遍，没问题再上 production。",
+    "aliases": [
+      "预发布",
+      "灰度环境"
+    ],
+    "related": [
+      "deploy",
+      "production",
+      "QA"
+    ]
+  },
+  {
+    "id": 21,
+    "term": "production",
+    "fullName": "production environment",
+    "category": "编程开发",
+    "meaning": "生产环境，用户实际使用的线上系统",
+    "scene": "staging 看着没问题，可以发 production 了。",
+    "aliases": [
+      "生产环境",
+      "线上",
+      "prod"
+    ],
+    "related": [
+      "deploy",
+      "staging",
+      "hotfix"
+    ]
+  },
+  {
+    "id": 22,
+    "term": "LGTM",
+    "fullName": "Looks Good To Me",
+    "category": "编程开发",
+    "meaning": "我看了，没问题 / 看起来不错",
+    "scene": "代码 review 完在 PR 下面评论一个 LGTM，表示可以合并了。",
+    "aliases": [
+      "looks good to me"
+    ],
+    "related": [
+      "review",
+      "PR",
+      "ACK"
+    ]
+  },
+  {
+    "id": 23,
+    "term": "WIP",
+    "fullName": "Work In Progress",
+    "category": "编程开发",
+    "meaning": "进行中，还没做完",
+    "scene": "这个 PR 还是 WIP，别急着 review，我还在改。",
+    "aliases": [
+      "work in progress"
+    ],
+    "related": [
+      "PR",
+      "draft"
+    ]
+  },
+  {
+    "id": 24,
+    "term": "FYI",
+    "fullName": "For Your Information",
+    "category": "编程开发",
+    "meaning": "供你参考，不需要回复",
+    "scene": "FYI，这是下季度的技术规划文档，有空可以看看。",
+    "aliases": [
+      "for your information"
+    ],
+    "related": [
+      "TL;DR",
+      "re:"
+    ]
+  },
+  {
+    "id": 25,
+    "term": "TL;DR",
+    "fullName": "Too Long; Didn't Read",
+    "category": "编程开发",
+    "meaning": "太长没看 / 一句话总结版本",
+    "scene": "前面详细分析了一堆，TL;DR：推荐方案 B，一天能做完。",
+    "aliases": [
+      "too long didn't read"
+    ],
+    "related": [
+      "FYI",
+      "re:"
+    ]
+  },
+  {
+    "id": 26,
+    "term": "PTAL",
+    "fullName": "Please Take A Look",
+    "category": "编程开发",
+    "meaning": "请看一下 / 帮忙看看",
+    "scene": "PTAL 我这个方案的可行性，特别是数据库设计那部分。",
+    "aliases": [
+      "please take a look"
+    ],
+    "related": [
+      "review",
+      "FYI"
+    ]
+  },
+  {
+    "id": 27,
+    "term": "ACK",
+    "fullName": "Acknowledged",
+    "category": "编程开发",
+    "meaning": "收到 / 已知悉",
+    "scene": "ACK，你说的问题我看到了，这周会处理掉。",
+    "aliases": [
+      "acknowledged"
+    ],
+    "related": [
+      "NACK",
+      "LGTM",
+      "FYI"
+    ]
+  },
+  {
+    "id": 28,
+    "term": "NACK",
+    "fullName": "Not Acknowledged / Negative Acknowledgment",
+    "category": "编程开发",
+    "meaning": "不认可 / 不同意",
+    "scene": "NACK，这个方案在并发场景下会有问题，不建议这么做。",
+    "aliases": [
+      "nack"
+    ],
+    "related": [
+      "ACK",
+      "review"
+    ]
+  },
+  {
+    "id": 29,
+    "term": "ASAP",
+    "fullName": "As Soon As Possible",
+    "category": "编程开发",
+    "meaning": "尽快",
+    "scene": "线上有个报错，ASAP 看一下日志，用户已经在群里面投诉了。",
+    "aliases": [
+      "as soon as possible"
+    ],
+    "related": [
+      "hotfix",
+      "ping"
+    ]
+  },
+  {
+    "id": 30,
+    "term": "IMO",
+    "fullName": "In My Opinion",
+    "category": "编程开发",
+    "meaning": "在我看来 / 个人认为",
+    "scene": "IMO 这个重构的优先级不高，我们先解决性能瓶颈吧。",
+    "aliases": [
+      "IMHO",
+      "in my opinion",
+      "in my humble opinion"
+    ],
+    "related": [
+      "FYI",
+      "PTAL"
+    ]
+  },
+  {
+    "id": 31,
+    "term": "re:",
+    "fullName": "regarding / reply",
+    "category": "职场汇报术语",
+    "meaning": "关于 / 回复某个话题",
+    "scene": "Re: 昨天说的登录方案，我整理了三种实现的对比，你看看。",
+    "aliases": [
+      "关于",
+      "回复"
+    ],
+    "related": [
+      "FYI",
+      "offline"
+    ]
+  },
+  {
+    "id": 32,
+    "term": "offline",
+    "fullName": "offline discussion",
+    "category": "职场汇报术语",
+    "meaning": "私下聊 / 会后单聊，不在当前场合展开",
+    "scene": "这个问题比较复杂，我们 offline 聊一下，别在群里刷屏了。",
+    "aliases": [
+      "私下聊",
+      "会后聊"
+    ],
+    "related": [
+      "re:",
+      "sync",
+      "ping"
+    ]
+  },
+  {
+    "id": 33,
+    "term": "ping",
+    "fullName": "ping",
+    "category": "职场汇报术语",
+    "meaning": "戳一下，提醒某人注意消息",
+    "scene": "这个问题需要后端的同事看一下，我 ping 一下他们组长。",
+    "aliases": [
+      "戳",
+      "艾特"
+    ],
+    "related": [
+      "ASAP",
+      "re:",
+      "sync"
+    ]
+  },
+  {
+    "id": 34,
+    "term": "sync",
+    "fullName": "sync / synchronize",
+    "category": "职场汇报术语",
+    "meaning": "同步信息 / 对一下进度",
+    "scene": "下午 3 点我们 sync 一下，看下各家模块的进度有没有风险。",
+    "aliases": [
+      "同步",
+      "对一下"
+    ],
+    "related": [
+      "align",
+      "standup",
+      "offline"
+    ]
+  },
+  {
+    "id": 35,
+    "term": "align",
+    "fullName": "align",
+    "category": "职场汇报术语",
+    "meaning": "对齐 / 达成共识",
+    "scene": "在开发之前先跟产品 align 一下需求，别做完了发现理解错了。",
+    "aliases": [
+      "对齐",
+      "拉齐"
+    ],
+    "related": [
+      "sync",
+      "context"
+    ]
+  },
+  {
+    "id": 36,
+    "term": "context",
+    "fullName": "context",
+    "category": "职场汇报术语",
+    "meaning": "背景信息 / 上下文",
+    "scene": "新来的同事可能没 context，我先说一下这个需求为什么这么做。",
+    "aliases": [
+      "背景",
+      "上下文"
+    ],
+    "related": [
+      "align",
+      "sync"
+    ]
+  },
+  {
+    "id": 37,
+    "term": "standup",
+    "fullName": "daily standup",
+    "category": "编程开发",
+    "meaning": "每日站会，快速同步昨天做了什么、今天做什么、有什么阻碍",
+    "scene": "早上的 standup 我请假了，在群里发一下我的进度：昨天做完了登录模块，今天开始做注册。",
+    "aliases": [
+      "站会",
+      "daily",
+      "晨会"
+    ],
+    "related": [
+      "sprint",
+      "sync"
+    ]
+  },
+  {
+    "id": 38,
+    "term": "backlog",
+    "fullName": "backlog",
+    "category": "编程开发",
+    "meaning": "待办事项列表，产品需求池",
+    "scene": "这个功能虽然好，但 backlog 里还有 50 多个需求排着队呢。",
+    "aliases": [
+      "需求池",
+      "待办"
+    ],
+    "related": [
+      "sprint",
+      "ticket"
+    ]
+  },
+  {
+    "id": 39,
+    "term": "CI/CD",
+    "fullName": "Continuous Integration / Continuous Deployment",
+    "category": "编程开发",
+    "meaning": "持续集成 / 持续部署，自动化构建、测试、部署流程",
+    "scene": "代码合进去 CI/CD 自动跑，lint 和单测过了才能部署。",
+    "aliases": [
+      "持续集成",
+      "流水线",
+      "pipeline"
+    ],
+    "related": [
+      "deploy",
+      "lint",
+      "build"
+    ]
+  },
+  {
+    "id": 40,
+    "term": "API",
+    "fullName": "Application Programming Interface",
+    "category": "编程开发",
+    "meaning": "应用程序接口，不同软件模块之间通信的约定",
+    "scene": "前端调后端 API 的时候 token 过期了，返回了 401，得重新登录。",
+    "aliases": [
+      "接口"
+    ],
+    "related": [
+      "SDK",
+      "endpoint",
+      "REST"
+    ]
+  },
+  {
+    "id": 41,
+    "term": "SDK",
+    "fullName": "Software Development Kit",
+    "category": "编程开发",
+    "meaning": "软件开发工具包，封装好的一系列 API 和工具",
+    "scene": "接入微信支付直接用官方 SDK 就行，不用自己从头写签名逻辑。",
+    "aliases": [
+      "开发工具包"
+    ],
+    "related": [
+      "API",
+      "library"
+    ]
+  },
+  {
+    "id": 42,
+    "term": "bug",
+    "fullName": "bug",
+    "category": "编程开发",
+    "meaning": "程序错误 / 缺陷",
+    "scene": "用户反馈说点击提交按钮没反应，我查了一下是前端 JS 报了个 bug。",
+    "aliases": [
+      "缺陷",
+      "问题",
+      "报错"
+    ],
+    "related": [
+      "debug",
+      "hotfix",
+      "QA"
+    ]
+  },
+  {
+    "id": 43,
+    "term": "debug",
+    "fullName": "debug",
+    "category": "编程开发",
+    "meaning": "调试，查找并修复程序中的错误",
+    "scene": "这个接口返回的数据不对，我 debug 一下看看是传参的问题还是后端逻辑的问题。",
+    "aliases": [
+      "调试",
+      "排查"
+    ],
+    "related": [
+      "bug",
+      "log",
+      "breakpoint"
+    ]
+  },
+  {
+    "id": 44,
+    "term": "cache",
+    "fullName": "cache",
+    "category": "编程开发",
+    "meaning": "缓存，将数据暂存到快速访问的存储中以提高性能",
+    "scene": "首页的接口太慢了，加个 Redis cache 把热门数据缓存 5 分钟。",
+    "aliases": [
+      "缓存"
+    ],
+    "related": [
+      "latency",
+      "Redis",
+      "TTL"
+    ]
+  },
+  {
+    "id": 45,
+    "term": "latency",
+    "fullName": "latency",
+    "category": "编程开发",
+    "meaning": "延迟，数据从发送到接收所经历的时间",
+    "scene": "这个接口 latency 太高了，99 分位到了 3 秒，得优化一下 SQL。",
+    "aliases": [
+      "延迟",
+      "延时"
+    ],
+    "related": [
+      "cache",
+      "performance",
+      "timeout"
+    ]
+  },
+  {
+    "id": 46,
+    "term": "timeout",
+    "fullName": "timeout",
+    "category": "编程开发",
+    "meaning": "超时，操作在规定时间内没有完成",
+    "scene": "调用第三方接口设个 5 秒 timeout，超了就降级返回兜底数据。",
+    "aliases": [
+      "超时"
+    ],
+    "related": [
+      "latency",
+      "retry"
+    ]
+  },
+  {
+    "id": 47,
+    "term": "refactor",
+    "fullName": "refactor",
+    "category": "编程开发",
+    "meaning": "重构，在不改变外部行为的前提下优化代码内部结构",
+    "scene": "这段代码太乱了，趁这期需求少 refactor 一下吧，后面接手的人也容易看懂。",
+    "aliases": [
+      "重构"
+    ],
+    "related": [
+      "tech debt",
+      "review"
+    ]
+  },
+  {
+    "id": 48,
+    "term": "tech debt",
+    "fullName": "technical debt",
+    "category": "编程开发",
+    "meaning": "技术债务，为快速交付而做出的临时方案，后续需要偿还",
+    "scene": "上次为了赶上线硬编码了配置，这个 tech debt 得尽快还掉。",
+    "aliases": [
+      "技术债",
+      "技术负债"
+    ],
+    "related": [
+      "refactor",
+      "sprint"
+    ]
+  },
+  {
+    "id": 49,
+    "term": "breakpoint",
+    "fullName": "breakpoint",
+    "category": "编程开发",
+    "meaning": "断点，调试时让程序停在指定位置以便检查状态",
+    "scene": "在这行打个 breakpoint，看下这个循环里变量的值到底是多少。",
+    "aliases": [
+      "断点"
+    ],
+    "related": [
+      "debug",
+      "log"
+    ]
+  },
+  {
+    "id": 50,
+    "term": "endpoint",
+    "fullName": "endpoint",
+    "category": "编程开发",
+    "meaning": "API 接口的具体地址 / 路径",
+    "scene": "这个 endpoint 是 /api/user/profile，GET 请求，返回用户信息。",
+    "aliases": [
+      "接口地址"
+    ],
+    "related": [
+      "API",
+      "REST"
+    ]
+  },
+  {
+    "id": 51,
+    "term": "Jira",
+    "fullName": "Jira",
+    "category": "编程开发",
+    "meaning": "Atlassian 公司的项目管理和问题跟踪工具",
+    "scene": "需求文档里涉及的每个功能点都要在 Jira 上建 ticket，这样好跟踪进度。",
+    "aliases": [
+      "吉拉"
+    ],
+    "related": [
+      "ticket",
+      "sprint",
+      "backlog"
+    ]
+  },
+  {
+    "id": 52,
+    "term": "k8s",
+    "fullName": "Kubernetes",
+    "category": "编程开发",
+    "meaning": "容器编排平台，管理 Docker 容器的部署、扩缩容和运维",
+    "scene": "这个服务部署在 k8s 上，重启 pod 就行，不用手动杀进程。",
+    "aliases": [
+      "kubernetes",
+      "容器编排"
+    ],
+    "related": [
+      "Docker",
+      "pod",
+      "deploy"
+    ]
+  },
+  {
+    "id": 53,
+    "term": "Docker",
+    "fullName": "Docker",
+    "category": "编程开发",
+    "meaning": "容器化平台，将应用及其依赖打包为标准化容器",
+    "scene": "你本地的环境和测试环境不一致？用 Docker 跑一下，保证环境一样。",
+    "aliases": [
+      "容器"
+    ],
+    "related": [
+      "k8s",
+      "image",
+      "container"
+    ]
+  },
+  {
+    "id": 54,
+    "term": "npm",
+    "fullName": "Node Package Manager",
+    "category": "编程开发",
+    "meaning": "Node.js 的包管理工具",
+    "scene": "项目 clone 下来先 npm install 装一下依赖，然后 npm run dev 启动。",
+    "aliases": [
+      "包管理器"
+    ],
+    "related": [
+      "package.json",
+      "dependencies"
+    ]
+  },
+  {
+    "id": 55,
+    "term": "Slack",
+    "fullName": "Slack",
+    "category": "编程开发",
+    "meaning": "企业即时通讯和协作工具（外企常用）",
+    "scene": "你在 Slack 上找一下 #frontend 频道，里面有很多历史讨论可以翻。",
+    "aliases": [],
+    "related": [
+      "ping",
+      "re:",
+      "channel"
+    ]
+  },
+  {
+    "id": 56,
+    "term": "Sentry",
+    "fullName": "Sentry",
+    "category": "编程开发",
+    "meaning": "错误监控和性能追踪平台",
+    "scene": "线上报错了去 Sentry 上看看堆栈，定位到是哪行代码出了问题。",
+    "aliases": [
+      "错误监控"
+    ],
+    "related": [
+      "bug",
+      "debug",
+      "log"
+    ]
+  },
+  {
+    "id": 57,
+    "term": "GitHub",
+    "fullName": "GitHub",
+    "category": "编程开发",
+    "meaning": "基于 Git 的代码托管和协作平台",
+    "scene": "你的代码推到 GitHub 上了吗？给我发一下仓库地址。",
+    "aliases": [],
+    "related": [
+      "GitLab",
+      "PR",
+      "fork"
+    ]
+  },
+  {
+    "id": 58,
+    "term": "GitLab",
+    "fullName": "GitLab",
+    "category": "编程开发",
+    "meaning": "与 GitHub 类似的代码托管平台，很多公司内部部署使用",
+    "scene": "我们公司的代码托管在 GitLab 上，不是 GitHub，别搞混了。",
+    "aliases": [],
+    "related": [
+      "GitHub",
+      "PR",
+      "MR"
+    ]
+  },
+  {
+    "id": 59,
+    "term": "Figma",
+    "fullName": "Figma",
+    "category": "编程开发",
+    "meaning": "在线 UI 设计工具，设计师和前端协作的主要平台",
+    "scene": "设计稿在 Figma 上更新了，新增了两个交互状态，你刷新看一下。",
+    "aliases": [
+      "设计稿"
+    ],
+    "related": [
+      "UI",
+      "review"
+    ]
+  },
+  {
+    "id": 60,
+    "term": "log",
+    "fullName": "log / logging",
+    "category": "编程开发",
+    "meaning": "日志，程序运行时记录的运行信息",
+    "scene": "查一下日志，看看用户支付失败的时候到底是哪个参数传错了。",
+    "aliases": [
+      "日志"
+    ],
+    "related": [
+      "debug",
+      "Sentry",
+      "monitor"
+    ]
+  },
+  {
+    "id": 61,
+    "term": "dependencies",
+    "fullName": "dependencies",
+    "category": "编程开发",
+    "meaning": "依赖，项目所引用的外部库或模块",
+    "scene": "这个项目依赖的包太多了，node_modules 都快 1 个 G 了。",
+    "aliases": [
+      "依赖",
+      "依赖包"
+    ],
+    "related": [
+      "npm",
+      "package.json"
+    ]
+  },
+  {
+    "id": 62,
+    "term": "build",
+    "fullName": "build",
+    "category": "编程开发",
+    "meaning": "构建，将源码编译打包为可部署的产物",
+    "scene": "npm run build 一下看看能不能过，别等到 CI 上报错了才发现。",
+    "aliases": [
+      "构建",
+      "编译",
+      "打包"
+    ],
+    "related": [
+      "deploy",
+      "CI/CD",
+      "lint"
+    ]
+  },
+  {
+    "id": 63,
+    "term": "lint",
+    "fullName": "lint / linter",
+    "category": "编程开发",
+    "meaning": "代码静态检查工具，检测潜在问题和风格问题",
+    "scene": "你提交的代码 lint 没过，ESLint 报了 3 个 warning，修一下再推。",
+    "aliases": [
+      "代码检查",
+      "静态检查",
+      "ESLint"
+    ],
+    "related": [
+      "build",
+      "CI/CD",
+      "review"
+    ]
+  },
+  {
+    "id": 64,
+    "term": "REST",
+    "fullName": "RESTful API",
+    "category": "编程开发",
+    "meaning": "一种 API 设计风格，使用 HTTP 动词操作资源",
+    "scene": "这个接口是 REST 风格的，GET 查数据，POST 创建，PUT 更新，DELETE 删除。",
+    "aliases": [
+      "RESTful",
+      "rest"
+    ],
+    "related": [
+      "API",
+      "endpoint",
+      "CRUD"
+    ]
+  },
+  {
+    "id": 65,
+    "term": "CRUD",
+    "fullName": "Create Read Update Delete",
+    "category": "编程开发",
+    "meaning": "增删改查，数据操作的最基本四个操作",
+    "scene": "这个管理后台就是个 CRUD 页面，先查数据再编辑保存，没什么复杂逻辑。",
+    "aliases": [
+      "增删改查"
+    ],
+    "related": [
+      "REST",
+      "API",
+      "endpoint"
+    ]
+  },
+  {
+    "id": 66,
+    "term": "MVP",
+    "fullName": "Minimum Viable Product",
+    "category": "编程开发",
+    "meaning": "最小可行产品，用最少的功能验证产品核心价值",
+    "scene": "第一期先做 MVP，只上线核心搜索和词条展示，收藏和推送后面再迭代。",
+    "aliases": [
+      "最小可行产品",
+      "最简产品"
+    ],
+    "related": [
+      "sprint",
+      "backlog",
+      "迭代"
+    ]
+  },
+  {
+    "id": 67,
+    "term": "ticket",
+    "fullName": "ticket / issue",
+    "category": "编程开发",
+    "meaning": "工单 / 任务卡片，记录一个待完成的开发任务",
+    "scene": "Jira 上给你建了个 ticket，这周要把搜索性能优化做完。",
+    "aliases": [
+      "工单",
+      "任务",
+      "卡片"
+    ],
+    "related": [
+      "Jira",
+      "sprint",
+      "backlog"
+    ]
+  },
+  {
+    "id": 68,
+    "term": "performance",
+    "fullName": "performance",
+    "category": "编程开发",
+    "meaning": "性能，系统响应速度和处理能力",
+    "scene": "这个列表页拉到 1000 条数据就开始卡了，performance 得优化一下，加个虚拟滚动。",
+    "aliases": [
+      "性能"
+    ],
+    "related": [
+      "latency",
+      "cache",
+      "optimize"
+    ]
+  },
+  {
+    "id": 69,
+    "term": "optimize",
+    "fullName": "optimize / optimization",
+    "category": "编程开发",
+    "meaning": "优化，改进系统性能或代码质量",
+    "scene": "首页加载时间 optimize 到 1 秒以内了，之前要 4 秒多。",
+    "aliases": [
+      "优化"
+    ],
+    "related": [
+      "performance",
+      "refactor",
+      "cache"
+    ]
+  },
+  {
+    "id": 70,
+    "term": "upstream",
+    "fullName": "upstream",
+    "category": "编程开发",
+    "meaning": "上游仓库，fork 出来的仓库所指向的原始仓库",
+    "scene": "原仓库 upstream 又更新了好几个 commit，我得同步一下到我的 fork。",
+    "aliases": [
+      "上游"
+    ],
+    "related": [
+      "fork",
+      "pull",
+      "remote"
+    ]
+  },
+  {
+    "id": 71,
+    "term": "revert",
+    "fullName": "revert",
+    "category": "编程开发",
+    "meaning": "撤销某个提交，生成一个新的反向提交",
+    "scene": "那个 commit 引入了一个线上 bug，直接 revert 掉吧，比手动改快。",
+    "aliases": [
+      "撤销",
+      "回退"
+    ],
+    "related": [
+      "rollback",
+      "commit",
+      "hotfix"
+    ]
+  },
+  {
+    "id": 72,
+    "term": "squash",
+    "fullName": "squash commits",
+    "category": "编程开发",
+    "meaning": "将多个提交压缩合并为一个",
+    "scene": "你的 PR 有 15 个 commit 太多了，squash 成一个再合进去，保持主干提交记录整洁。",
+    "aliases": [
+      "压缩提交"
+    ],
+    "related": [
+      "rebase",
+      "commit",
+      "merge"
+    ]
+  },
+  {
+    "id": 73,
+    "term": "agile",
+    "fullName": "Agile Development",
+    "category": "编程开发",
+    "meaning": "敏捷开发，以迭代为核心、快速响应变化的软件开发方法论",
+    "scene": "我们现在是 agile 模式，两周一个 sprint，每个 sprint 结束要做回顾。",
+    "aliases": [
+      "敏捷",
+      "迭代开发"
+    ],
+    "related": [
+      "scrum",
+      "sprint",
+      "standup"
+    ]
+  },
+  {
+    "id": 74,
+    "term": "scrum",
+    "fullName": "Scrum",
+    "category": "编程开发",
+    "meaning": "一种敏捷开发框架，强调自组织团队和迭代交付",
+    "scene": "我们团队用的是 scrum，每天早上 standup，每两周一个 sprint。",
+    "aliases": [
+      "敏捷框架"
+    ],
+    "related": [
+      "agile",
+      "sprint",
+      "standup"
+    ]
+  },
+  {
+    "id": 75,
+    "term": "resolve",
+    "fullName": "resolve",
+    "category": "编程开发",
+    "meaning": "解决（冲突或问题）",
+    "scene": "这个 conflict 你来 resolve 一下吧，你对这段代码更熟悉。",
+    "aliases": [
+      "解决",
+      "处理"
+    ],
+    "related": [
+      "conflict",
+      "merge"
+    ]
+  },
+  {
+    "id": 76,
+    "term": "container",
+    "fullName": "container",
+    "category": "编程开发",
+    "meaning": "容器，一种轻量级虚拟化技术，将应用与环境打包隔离",
+    "scene": "开发环境、测试环境、生产环境全用 container 跑，保证一致性。",
+    "aliases": [
+      "容器实例"
+    ],
+    "related": [
+      "Docker",
+      "k8s",
+      "image"
+    ]
+  },
+  {
+    "id": 77,
+    "term": "image",
+    "fullName": "Docker image",
+    "category": "编程开发",
+    "meaning": "Docker 镜像，容器的只读模板，包含运行应用所需的一切",
+    "scene": "先把 Docker image build 出来，推到镜像仓库，然后 k8s 会自动拉取部署。",
+    "aliases": [
+      "镜像",
+      "容器镜像"
+    ],
+    "related": [
+      "Docker",
+      "container",
+      "k8s"
+    ]
+  },
+  {
+    "id": 78,
+    "term": "library",
+    "fullName": "library",
+    "category": "编程开发",
+    "meaning": "库，封装了特定功能的可复用代码集合",
+    "scene": "日期格式化别自己手写了，用 dayjs 这个 library，又小又好用。",
+    "aliases": [
+      "库",
+      "包"
+    ],
+    "related": [
+      "SDK",
+      "dependencies",
+      "npm"
+    ]
+  },
+  {
+    "id": 79,
+    "term": "framework",
+    "fullName": "framework",
+    "category": "编程开发",
+    "meaning": "框架，提供了一套完整架构和开发模式的基础设施",
+    "scene": "这个项目用的 Vue 3 框架，你熟悉一下 Composition API 的写法。",
+    "aliases": [
+      "框架"
+    ],
+    "related": [
+      "library",
+      "Vue",
+      "React"
+    ]
+  },
+  {
+    "id": 80,
+    "term": "React",
+    "fullName": "React",
+    "category": "编程开发",
+    "meaning": "Facebook 出品的前端 UI 库，使用 JSX 语法",
+    "scene": "我们公司前端统一用 React，如果你之前用 Vue 的话需要花一周熟悉一下。",
+    "aliases": [
+      "React.js"
+    ],
+    "related": [
+      "Vue",
+      "framework",
+      "component"
+    ]
+  },
+  {
+    "id": 81,
+    "term": "component",
+    "fullName": "component",
+    "category": "编程开发",
+    "meaning": "组件，UI 中可以复用的独立单元",
+    "scene": "这个弹窗在三个页面都用到了，抽成一个公共 component，别每个页面重复写一遍。",
+    "aliases": [
+      "组件",
+      "模块"
+    ],
+    "related": [
+      "React",
+      "Vue",
+      "props"
+    ]
+  },
+  {
+    "id": 82,
+    "term": "props",
+    "fullName": "properties",
+    "category": "编程开发",
+    "meaning": "属性，从父组件传递给子组件的数据",
+    "scene": "这个组件通过 props 接收数据，父组件传什么它就渲染什么。",
+    "aliases": [
+      "属性"
+    ],
+    "related": [
+      "component",
+      "state"
+    ]
+  },
+  {
+    "id": 83,
+    "term": "SSR",
+    "fullName": "Server-Side Rendering",
+    "category": "编程开发",
+    "meaning": "服务端渲染，在服务器上生成 HTML 再返回给浏览器",
+    "scene": "这个项目要做 SEO 所以用了 SSR，首屏加载也比纯 CSR 块。",
+    "aliases": [
+      "服务端渲染"
+    ],
+    "related": [
+      "SEO",
+      "CSR",
+      "performance"
+    ]
+  },
+  {
+    "id": 84,
+    "term": "SEO",
+    "fullName": "Search Engine Optimization",
+    "category": "编程开发",
+    "meaning": "搜索引擎优化，提升网站在搜索引擎中的排名",
+    "scene": "词条详情页要做 SEO，让用户搜'checkout 是什么'的时候能搜到我们。",
+    "aliases": [
+      "搜索引擎优化"
+    ],
+    "related": [
+      "SSR",
+      "meta"
+    ]
+  },
+  {
+    "id": 85,
+    "term": "retry",
+    "fullName": "retry",
+    "category": "编程开发",
+    "meaning": "重试，操作失败后再次尝试",
+    "scene": "网络超时自动 retry 了三次还是失败的话就报错给用户。",
+    "aliases": [
+      "重试"
+    ],
+    "related": [
+      "timeout",
+      "error handling"
+    ]
+  },
+  {
+    "id": 86,
+    "term": "monitor",
+    "fullName": "monitor / monitoring",
+    "category": "编程开发",
+    "meaning": "监控，持续观察系统运行状态",
+    "scene": "加了 monitor 之后，CPU 一超过 80% 就自动告警发群里。",
+    "aliases": [
+      "监控",
+      "告警"
+    ],
+    "related": [
+      "log",
+      "Sentry",
+      "performance"
+    ]
+  },
+  {
+    "id": 87,
+    "term": "i18n",
+    "fullName": "internationalization",
+    "category": "编程开发",
+    "meaning": "国际化，让软件支持多语言和多地区",
+    "scene": "这个 App 要出海，下一期得做 i18n，至少要支持中英日三种语言。",
+    "aliases": [
+      "国际化",
+      "多语言"
+    ],
+    "related": [
+      "locale"
+    ]
+  },
+  {
+    "id": 88,
+    "term": "a11y",
+    "fullName": "accessibility",
+    "category": "编程开发",
+    "meaning": "无障碍访问，确保残障用户也能正常使用产品",
+    "scene": "页面交互要做 a11y 适配，键盘能操作、屏幕阅读器能朗读。",
+    "aliases": [
+      "无障碍",
+      "可访问性"
+    ],
+    "related": [
+      "UI"
+    ]
+  },
+  {
+    "id": 89,
+    "term": "scalability",
+    "fullName": "scalability",
+    "category": "编程开发",
+    "meaning": "可扩展性，系统应对增长的能力",
+    "scene": "现在用户只有一千，但设计上要考虑 scalability，万一峰值到十万也不能挂。",
+    "aliases": [
+      "可扩展性",
+      "伸缩性"
+    ],
+    "related": [
+      "performance",
+      "architecture"
+    ]
+  },
+  {
+    "id": 90,
+    "term": "POC",
+    "fullName": "Proof of Concept",
+    "category": "编程开发",
+    "meaning": "概念验证，快速做一个原型验证方案的可行性",
+    "scene": "先别急着做详细设计，花半天做个 POC 跑一下，看看这个方案能不能走通。",
+    "aliases": [
+      "概念验证",
+      "原型验证"
+    ],
+    "related": [
+      "MVP",
+      "prototype"
+    ]
+  },
+  {
+    "id": 91,
+    "term": "DRY",
+    "fullName": "Don't Repeat Yourself",
+    "category": "编程开发",
+    "meaning": "不要重复自己，能复用的代码别到处复制粘贴",
+    "scene": "这三个页面都有一样的日期格式化逻辑，抽成一个工具函数，DRY 原则别忘了。",
+    "aliases": [
+      "don't repeat yourself"
+    ],
+    "related": [
+      "refactor",
+      "KISS",
+      "YAGNI"
+    ]
+  },
+  {
+    "id": 92,
+    "term": "KISS",
+    "fullName": "Keep It Simple, Stupid",
+    "category": "编程开发",
+    "meaning": "保持简单，别过度设计",
+    "scene": "这个需求一个 if-else 就搞定了，别引入状态机了，KISS 原则。",
+    "aliases": [
+      "keep it simple"
+    ],
+    "related": [
+      "DRY",
+      "YAGNI",
+      "refactor"
+    ]
+  },
+  {
+    "id": 93,
+    "term": "YAGNI",
+    "fullName": "You Ain't Gonna Need It",
+    "category": "编程开发",
+    "meaning": "你不会需要它的，别为未来可能的需求提前写代码",
+    "scene": "你现在就加这个扩展点干嘛？以后也不一定会用，YAGNI 啊。",
+    "aliases": [
+      "you ain't gonna need it"
+    ],
+    "related": [
+      "KISS",
+      "DRY",
+      "MVP"
+    ]
+  },
+  {
+    "id": 94,
+    "term": "SOLID",
+    "fullName": "SOLID Principles",
+    "category": "编程开发",
+    "meaning": "面向对象设计的五个基本原则：单一职责、开闭、里氏替换、接口隔离、依赖反转",
+    "scene": "这个类的职责太多了，违背了 SOLID 里的单一职责原则，拆成两个吧。",
+    "aliases": [
+      "solid原则",
+      "面向对象原则"
+    ],
+    "related": [
+      "OOP",
+      "refactor",
+      "design pattern"
+    ],
+    "note": "S=单一职责 O=开闭原则 L=里氏替换 I=接口隔离 D=依赖反转"
+  },
+  {
+    "id": 95,
+    "term": "OOP",
+    "fullName": "Object-Oriented Programming",
+    "category": "编程开发",
+    "meaning": "面向对象编程，以对象为核心组织代码的编程范式",
+    "scene": "Java 是典型的 OOP 语言，先定义类，再用对象交互。",
+    "aliases": [
+      "面向对象"
+    ],
+    "related": [
+      "SOLID",
+      "FP",
+      "class"
+    ]
+  },
+  {
+    "id": 96,
+    "term": "FP",
+    "fullName": "Functional Programming",
+    "category": "编程开发",
+    "meaning": "函数式编程，以纯函数和数据不可变性为核心的编程范式",
+    "scene": "React 的 hooks 设计借鉴了很多 FP 思想，强调纯函数和不可变状态。",
+    "aliases": [
+      "函数式编程"
+    ],
+    "related": [
+      "OOP",
+      "immutable",
+      "pure function"
+    ]
+  },
+  {
+    "id": 97,
+    "term": "MVC",
+    "fullName": "Model-View-Controller",
+    "category": "编程开发",
+    "meaning": "一种软件架构模式，将数据、界面、业务逻辑三层分离",
+    "scene": "这个项目用的是 MVC 架构，Model 管数据，View 管页面，Controller 管逻辑。",
+    "aliases": [
+      "MVVM",
+      "MVP"
+    ],
+    "related": [
+      "OOP",
+      "architecture"
+    ]
+  },
+  {
+    "id": 98,
+    "term": "TDD",
+    "fullName": "Test-Driven Development",
+    "category": "编程开发",
+    "meaning": "测试驱动开发，先写测试用例再写实现代码",
+    "scene": "这个模块逻辑比较复杂，建议用 TDD，先把所有 case 的测试写了再写实现。",
+    "aliases": [
+      "测试驱动"
+    ],
+    "related": [
+      "unit test",
+      "refactor"
+    ]
+  },
+  {
+    "id": 99,
+    "term": "unit test",
+    "fullName": "unit testing",
+    "category": "编程开发",
+    "meaning": "单元测试，对最小的代码单元（函数/方法）进行独立测试",
+    "scene": "你这个函数边界条件太多了，补几个 unit test，空数组、null、超长字符串都测一下。",
+    "aliases": [
+      "单测",
+      "单元测试"
+    ],
+    "related": [
+      "TDD",
+      "E2E",
+      "integration test"
+    ]
+  },
+  {
+    "id": 100,
+    "term": "E2E",
+    "fullName": "End-to-End Testing",
+    "category": "编程开发",
+    "meaning": "端到端测试，模拟真实用户操作验证整个流程",
+    "scene": "单测都过了，但 E2E 挂了——登录→下单→支付整个流程在第三步报错了。",
+    "aliases": [
+      "端到端测试",
+      "e2e测试"
+    ],
+    "related": [
+      "unit test",
+      "integration test",
+      "QA"
+    ]
+  },
+  {
+    "id": 101,
+    "term": "cherry-pick",
+    "fullName": "git cherry-pick",
+    "category": "编程开发",
+    "meaning": "精选提交，将某个特定 commit 应用到当前分支",
+    "scene": "这个 bugfix 只 cherry-pick 到 release 分支就行，不用把整个 feature 分支合过去。",
+    "aliases": [
+      "cherry pick"
+    ],
+    "related": [
+      "commit",
+      "merge",
+      "rebase"
+    ]
+  },
+  {
+    "id": 102,
+    "term": "force push",
+    "fullName": "git push --force",
+    "category": "编程开发",
+    "meaning": "强制推送，覆盖远程分支历史（危险操作）",
+    "scene": "rebase 之后需要 force push，但注意别在公共分支上用，会把别人的提交搞丢。",
+    "aliases": [
+      "git push -f",
+      "强推"
+    ],
+    "related": [
+      "rebase",
+      "push"
+    ],
+    "note": "公共分支（main/develop）禁止 force push，只在自己的 feature 分支用"
+  },
+  {
+    "id": 103,
+    "term": "code smell",
+    "fullName": "code smell",
+    "category": "编程开发",
+    "meaning": "代码异味，某些代码模式暗示可能存在更深层的问题",
+    "scene": "这个函数 200 行了，传了 8 个参数，妥妥的 code smell，得重构。",
+    "aliases": [
+      "代码异味",
+      "坏味道"
+    ],
+    "related": [
+      "refactor",
+      "tech debt"
+    ]
+  },
+  {
+    "id": 104,
+    "term": "rubber ducking",
+    "fullName": "rubber duck debugging",
+    "category": "编程开发",
+    "meaning": "小黄鸭调试法，向一个物品逐行解释代码来发现bug",
+    "scene": "我自己 debug 了两小时没找到问题，跟新同事讲了一遍代码逻辑，讲到一半就发现了。这就是 rubber ducking。",
+    "aliases": [
+      "小黄鸭调试法",
+      "橡皮鸭调试"
+    ],
+    "related": [
+      "debug",
+      "code review"
+    ]
+  },
+  {
+    "id": 105,
+    "term": "bikeshedding",
+    "fullName": "bikeshedding / Parkinson's Law of Triviality",
+    "category": "职场汇报术语",
+    "meaning": "自行车棚效应，团队在细枝末节上争论不休而忽略核心问题",
+    "scene": "架构方案讨论了 10 分钟就过了，按钮颜色争论了半小时，典型的 bikeshedding。",
+    "aliases": [
+      "自行车棚效应"
+    ],
+    "related": [
+      "review",
+      "meeting"
+    ]
+  },
+  {
+    "id": 106,
+    "term": "PEBCAK",
+    "fullName": "Problem Exists Between Chair And Keyboard",
+    "category": "职场汇报术语",
+    "meaning": "问题出在椅子和键盘之间（即用户自己的问题）",
+    "scene": "用户反馈说登录不了，结果发现是没开大写锁定——PEBCAK，不是 bug。",
+    "aliases": [
+      "用户问题"
+    ],
+    "related": [
+      "bug",
+      "debug"
+    ]
+  },
+  {
+    "id": 107,
+    "term": "RTFM",
+    "fullName": "Read The F***ing Manual",
+    "category": "职场汇报术语",
+    "meaning": "去看文档/手册（表达不耐烦但有时是合理建议）",
+    "scene": "这个配置参数怎么用？RTFM，文档里写得清清楚楚的。",
+    "aliases": [
+      "read the manual",
+      "去看文档"
+    ],
+    "related": [
+      "documentation"
+    ]
+  },
+  {
+    "id": 108,
+    "term": "dogfooding",
+    "fullName": "dogfooding / eating your own dog food",
+    "category": "编程开发",
+    "meaning": "吃自己的狗粮，使用自己开发的产品来发现问题",
+    "scene": "我们自己的项目管理工具一堆 bug，都不好意思让别人用。先内部 dogfooding 一个月再说。",
+    "aliases": [
+      "吃狗粮",
+      "内部试用"
+    ],
+    "related": [
+      "QA",
+      "MVP"
+    ]
+  },
+  {
+    "id": 109,
+    "term": "JSON",
+    "fullName": "JavaScript Object Notation",
+    "category": "编程开发",
+    "meaning": "一种轻量级数据交换格式，前后端通信的事实标准",
+    "scene": "后端返回的 JSON 里多了一层嵌套，前端解析的时候注意取 data.result 而不是直接 data。",
+    "aliases": [],
+    "related": [
+      "API",
+      "YAML",
+      "XML"
+    ]
+  },
+  {
+    "id": 110,
+    "term": "YAML",
+    "fullName": "YAML Ain't Markup Language",
+    "category": "编程开发",
+    "meaning": "一种人类可读的数据序列化格式，常用于配置文件",
+    "scene": "CI 配置文件用 YAML 写的，注意缩进要用空格不能用 Tab，不然解析报错。",
+    "aliases": [],
+    "related": [
+      "JSON",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": 111,
+    "term": "regex",
+    "fullName": "regular expression",
+    "category": "编程开发",
+    "meaning": "正则表达式，用于字符串模式匹配的强大工具",
+    "scene": "用户输入的手机号要做格式校验，写个 regex 匹配 1 开头的 11 位数字。",
+    "aliases": [
+      "正则",
+      "正则表达式"
+    ],
+    "related": [
+      "string",
+      "validation"
+    ]
+  },
+  {
+    "id": 112,
+    "term": "CLI",
+    "fullName": "Command Line Interface",
+    "category": "编程开发",
+    "meaning": "命令行界面，通过输入文本命令操作计算机",
+    "scene": "这个工具没有图形界面，只能在 CLI 下用，你先 cd 到项目目录再执行命令。",
+    "aliases": [
+      "命令行",
+      "终端"
+    ],
+    "related": [
+      "IDE",
+      "REPL"
+    ]
+  },
+  {
+    "id": 113,
+    "term": "IDE",
+    "fullName": "Integrated Development Environment",
+    "category": "编程开发",
+    "meaning": "集成开发环境，集编码、调试、构建于一体的软件",
+    "scene": "你用什么 IDE？VS Code 还是 JetBrains？我们团队统一用 VS Code，配置共享方便。",
+    "aliases": [
+      "编辑器",
+      "开发工具"
+    ],
+    "related": [
+      "CLI",
+      "VS Code",
+      "debug"
+    ]
+  },
+  {
+    "id": 114,
+    "term": "SSH",
+    "fullName": "Secure Shell",
+    "category": "编程开发",
+    "meaning": "安全外壳协议，用于加密远程登录服务器",
+    "scene": "你 SSH 到跳板机上，然后再连开发服务器看日志。",
+    "aliases": [
+      "远程登录"
+    ],
+    "related": [
+      "server",
+      "CLI"
+    ]
+  },
+  {
+    "id": 115,
+    "term": "cron",
+    "fullName": "cron job",
+    "category": "编程开发",
+    "meaning": "定时任务，在指定时间自动执行脚本",
+    "scene": "每天晚上 2 点跑个 cron 把前一天的订单数据做汇总统计，不用人工导。",
+    "aliases": [
+      "定时任务",
+      "crontab"
+    ],
+    "related": [
+      "script",
+      "automation"
+    ]
+  },
+  {
+    "id": 116,
+    "term": "webhook",
+    "fullName": "webhook",
+    "category": "编程开发",
+    "meaning": "网络钩子，事件发生时自动向指定 URL 发送 HTTP 请求",
+    "scene": "GitHub 上配个 webhook，每次有人提 PR 就自动通知企业微信群。",
+    "aliases": [
+      "钩子"
+    ],
+    "related": [
+      "API",
+      "callback",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": 117,
+    "term": "OAuth",
+    "fullName": "Open Authorization",
+    "category": "编程开发",
+    "meaning": "开放授权协议，允许第三方应用获取用户信息而无需密码",
+    "scene": "登录用微信 OAuth 就行，用户不用再注册一套账号密码了。",
+    "aliases": [
+      "第三方登录",
+      "授权登录"
+    ],
+    "related": [
+      "JWT",
+      "token",
+      "API"
+    ]
+  },
+  {
+    "id": 118,
+    "term": "JWT",
+    "fullName": "JSON Web Token",
+    "category": "编程开发",
+    "meaning": "一种紧凑的、URL 安全的 token 格式，用于身份认证和信息交换",
+    "scene": "登录成功后后端返回一个 JWT，前端每次请求都带上，后端解析 JWT 就知道是谁了。",
+    "aliases": [
+      "token",
+      "令牌"
+    ],
+    "related": [
+      "OAuth",
+      "auth",
+      "API"
+    ]
+  },
+  {
+    "id": 119,
+    "term": "CORS",
+    "fullName": "Cross-Origin Resource Sharing",
+    "category": "编程开发",
+    "meaning": "跨域资源共享，浏览器控制不同源之间请求的安全机制",
+    "scene": "本地开发前端调后端 API 报 CORS 错误，后端加一下 Access-Control-Allow-Origin 头就行了。",
+    "aliases": [
+      "跨域"
+    ],
+    "related": [
+      "API",
+      "HTTP"
+    ]
+  },
+  {
+    "id": 120,
+    "term": "idempotent",
+    "fullName": "idempotent / idempotency",
+    "category": "编程开发",
+    "meaning": "幂等，同一个操作执行多次结果和执行一次相同",
+    "scene": "支付接口要做成幂等的，用户不小心点了两次提交，只能扣一次钱。",
+    "aliases": [
+      "幂等性"
+    ],
+    "related": [
+      "API",
+      "retry"
+    ]
+  },
+  {
+    "id": 121,
+    "term": "race condition",
+    "fullName": "race condition",
+    "category": "编程开发",
+    "meaning": "竞态条件，多个操作同时访问共享数据导致结果不可预期",
+    "scene": "两个请求同时修改库存数量，没加锁导致超卖了，这是典型的 race condition。",
+    "aliases": [
+      "竞态",
+      "并发问题"
+    ],
+    "related": [
+      "deadlock",
+      "concurrency",
+      "bug"
+    ]
+  },
+  {
+    "id": 122,
+    "term": "deadlock",
+    "fullName": "deadlock",
+    "category": "编程开发",
+    "meaning": "死锁，两个操作互相等待对方释放资源导致永远卡住",
+    "scene": "事务 A 锁了表 1 等表 2，事务 B 锁了表 2 等表 1，死锁了。",
+    "aliases": [
+      "死锁"
+    ],
+    "related": [
+      "race condition",
+      "concurrency"
+    ]
+  },
+  {
+    "id": 123,
+    "term": "memory leak",
+    "fullName": "memory leak",
+    "category": "编程开发",
+    "meaning": "内存泄漏，程序不再需要的内存没有被释放",
+    "scene": "这个页面开久了浏览器越来越卡，排查发现事件监听器没解绑，内存泄漏了。",
+    "aliases": [
+      "内存泄漏",
+      "内存溢出"
+    ],
+    "related": [
+      "performance",
+      "debug"
+    ]
+  },
+  {
+    "id": 124,
+    "term": "XSS",
+    "fullName": "Cross-Site Scripting",
+    "category": "编程开发",
+    "meaning": "跨站脚本攻击，在页面中注入恶意脚本",
+    "scene": "用户输入的内容直接渲染到页面上有 XSS 风险，要先用 DOMPurify 过滤一下。",
+    "aliases": [
+      "跨站脚本攻击"
+    ],
+    "related": [
+      "CSRF",
+      "SQL injection",
+      "security"
+    ]
+  },
+  {
+    "id": 125,
+    "term": "CSRF",
+    "fullName": "Cross-Site Request Forgery",
+    "category": "编程开发",
+    "meaning": "跨站请求伪造，诱导用户在不知情的情况下执行非本意的操作",
+    "scene": "表单提交要加 CSRF token，不然攻击者可以在别的网站伪造请求。",
+    "aliases": [
+      "跨站请求伪造"
+    ],
+    "related": [
+      "XSS",
+      "token",
+      "security"
+    ]
+  },
+  {
+    "id": 126,
+    "term": "SQL injection",
+    "fullName": "SQL Injection",
+    "category": "编程开发",
+    "meaning": "SQL 注入，通过用户输入拼接恶意 SQL 语句来攻击数据库",
+    "scene": "别用字符串拼接 SQL，用参数化查询，不然用户输入 'OR 1=1' 就把全表查出来了。",
+    "aliases": [
+      "SQL注入"
+    ],
+    "related": [
+      "XSS",
+      "CSRF",
+      "security"
+    ]
+  },
+  {
+    "id": 127,
+    "term": "CDN",
+    "fullName": "Content Delivery Network",
+    "category": "编程开发",
+    "meaning": "内容分发网络，通过各地节点加速静态资源访问",
+    "scene": "首页图片加载慢，上个 CDN，用户就近访问能快 300ms。",
+    "aliases": [
+      "内容分发网络",
+      "加速"
+    ],
+    "related": [
+      "cache",
+      "performance",
+      "latency"
+    ]
+  },
+  {
+    "id": 128,
+    "term": "DNS",
+    "fullName": "Domain Name System",
+    "category": "编程开发",
+    "meaning": "域名系统，将域名解析为 IP 地址",
+    "scene": "网站突然访问不了，先 ping 一下看是不是 DNS 解析出了问题。",
+    "aliases": [
+      "域名解析"
+    ],
+    "related": [
+      "CDN",
+      "HTTP"
+    ]
+  },
+  {
+    "id": 129,
+    "term": "load balancer",
+    "fullName": "load balancer",
+    "category": "编程开发",
+    "meaning": "负载均衡器，将请求分发到多台服务器以分摊压力",
+    "scene": "双十一前要加服务器，然后在负载均衡器上把新节点加进去。",
+    "aliases": [
+      "负载均衡",
+      "LB"
+    ],
+    "related": [
+      "scalability",
+      "performance",
+      "reverse proxy"
+    ]
+  },
+  {
+    "id": 130,
+    "term": "feature flag",
+    "fullName": "feature flag / feature toggle",
+    "category": "编程开发",
+    "meaning": "功能开关，通过配置控制功能的上线和回滚而不需要重新部署",
+    "scene": "新功能先藏在 feature flag 后面，万一上线有问题直接关开关，不用回滚代码。",
+    "aliases": [
+      "功能开关",
+      "特性开关"
+    ],
+    "related": [
+      "deploy",
+      "canary",
+      "A/B testing"
+    ]
+  },
+  {
+    "id": 131,
+    "term": "A/B testing",
+    "fullName": "A/B testing",
+    "category": "编程开发",
+    "meaning": "A/B 测试，将用户随机分成两组对比不同方案的效果",
+    "scene": "按钮放左边还是右边？做个 A/B testing，50% 用户看左边，50% 看右边，看哪个点击率高。",
+    "aliases": [
+      "AB测试",
+      "对照实验"
+    ],
+    "related": [
+      "feature flag",
+      "data analysis"
+    ]
+  },
+  {
+    "id": 132,
+    "term": "canary",
+    "fullName": "canary release / canary deployment",
+    "category": "编程开发",
+    "meaning": "金丝雀发布，先让一小部分用户体验新版本，没问题再全量",
+    "scene": "新版本先 canary 到 5% 用户，观察半小时没报错再全量。",
+    "aliases": [
+      "灰度发布",
+      "金丝雀"
+    ],
+    "related": [
+      "feature flag",
+      "deploy",
+      "rollback"
+    ]
+  },
+  {
+    "id": 133,
+    "term": "GraphQL",
+    "fullName": "GraphQL",
+    "category": "编程开发",
+    "meaning": "一种 API 查询语言，客户端可以精确指定需要哪些字段",
+    "scene": "REST 接口一次返回 50 个字段太浪费了，改用 GraphQL，前端要什么字段就查什么。",
+    "aliases": [],
+    "related": [
+      "REST",
+      "API"
+    ]
+  },
+  {
+    "id": 134,
+    "term": "WebSocket",
+    "fullName": "WebSocket",
+    "category": "编程开发",
+    "meaning": "全双工通信协议，浏览器和服务器可以互相主动推送消息",
+    "scene": "聊天功能用 WebSocket，消息实时推送，不用前端一直轮询接口。",
+    "aliases": [
+      "ws"
+    ],
+    "related": [
+      "HTTP",
+      "real-time",
+      "API"
+    ]
+  },
+  {
+    "id": 135,
+    "term": "middleware",
+    "fullName": "middleware",
+    "category": "编程开发",
+    "meaning": "中间件，位于请求和响应之间的处理层",
+    "scene": "登录校验写在 middleware 里，每个请求进来先过一遍，不用每个接口里都写一遍。",
+    "aliases": [
+      "中间件"
+    ],
+    "related": [
+      "API",
+      "auth",
+      "backend"
+    ]
+  },
+  {
+    "id": 136,
+    "term": "Promise",
+    "fullName": "Promise",
+    "category": "编程开发",
+    "meaning": "JavaScript 中处理异步操作的对象，代表一个未来会完成的操作",
+    "scene": "调接口是异步的，用 Promise 或者 async/await 处理返回值，别用回调地狱。",
+    "aliases": [],
+    "related": [
+      "async/await",
+      "callback",
+      "async"
+    ]
+  },
+  {
+    "id": 137,
+    "term": "async/await",
+    "fullName": "async/await",
+    "category": "编程开发",
+    "meaning": "异步编程语法糖，让异步代码看起来像同步代码",
+    "scene": "用 async/await 改写这段 Promise 链式调用，代码可读性好多了。",
+    "aliases": [
+      "async await"
+    ],
+    "related": [
+      "Promise",
+      "callback"
+    ]
+  },
+  {
+    "id": 138,
+    "term": "serverless",
+    "fullName": "serverless computing",
+    "category": "编程开发",
+    "meaning": "无服务器计算，开发者不用管服务器，只需写函数并部署到云端",
+    "scene": "这个定时任务逻辑很简单，用 serverless 函数跑就行，不用专门起一台服务器。",
+    "aliases": [
+      "无服务器"
+    ],
+    "related": [
+      "cloud",
+      "FaaS",
+      "deploy"
+    ]
+  },
+  {
+    "id": 139,
+    "term": "IaaS/PaaS/SaaS",
+    "fullName": "Infrastructure / Platform / Software as a Service",
+    "category": "编程开发",
+    "meaning": "云计算的三种服务模式：基础设施即服务 / 平台即服务 / 软件即服务",
+    "scene": "自己买服务器是 IaaS，用云数据库是 PaaS，用飞书是 SaaS——越来越不用自己管底层。",
+    "aliases": [
+      "云服务模式"
+    ],
+    "related": [
+      "cloud",
+      "serverless"
+    ]
+  },
+  {
+    "id": 140,
+    "term": "SLA",
+    "fullName": "Service Level Agreement",
+    "category": "编程开发",
+    "meaning": "服务等级协议，承诺服务的可用性指标",
+    "scene": "我们的 SLA 是 99.9%，意味着一年只能挂 8.76 小时，超出要赔钱。",
+    "aliases": [
+      "服务等级协议"
+    ],
+    "related": [
+      "SLO",
+      "SLI",
+      "monitor"
+    ]
+  },
+  {
+    "id": 141,
+    "term": "SLO",
+    "fullName": "Service Level Objective",
+    "category": "编程开发",
+    "meaning": "服务等级目标，团队内部设定的服务质量目标",
+    "scene": "这个季度 SLO 是接口 P99 延迟不超过 200ms，现在 350ms，得优化。",
+    "aliases": [
+      "服务等级目标"
+    ],
+    "related": [
+      "SLA",
+      "SLI",
+      "monitor"
+    ]
+  },
+  {
+    "id": 142,
+    "term": "KPI",
+    "fullName": "Key Performance Indicator",
+    "category": "职场汇报术语",
+    "meaning": "关键绩效指标，衡量工作成果的量化指标",
+    "scene": "这个季度你的 KPI 是把首页加载速度优化到 1.5 秒以内。",
+    "aliases": [
+      "绩效指标"
+    ],
+    "related": [
+      "OKR",
+      "SLA"
+    ]
+  },
+  {
+    "id": 143,
+    "term": "OKR",
+    "fullName": "Objectives and Key Results",
+    "category": "职场汇报术语",
+    "meaning": "目标与关键结果，目标管理方法",
+    "scene": "Q1 的 OKR：O=提升系统稳定性，KR1=可用性到 99.95%，KR2=P99 延迟降到 200ms。",
+    "aliases": [
+      "目标管理"
+    ],
+    "related": [
+      "KPI",
+      "SLO"
+    ]
+  },
+  {
+    "id": 144,
+    "term": "PM",
+    "fullName": "Product Manager / Project Manager",
+    "category": "职场汇报术语",
+    "meaning": "产品经理 / 项目经理",
+    "scene": "这个需求的细节我不确定，你去跟 PM 对齐一下，别自己猜。",
+    "aliases": [
+      "产品经理",
+      "项目经理"
+    ],
+    "related": [
+      "PO",
+      "sprint",
+      "backlog"
+    ]
+  },
+  {
+    "id": 145,
+    "term": "SRE",
+    "fullName": "Site Reliability Engineer",
+    "category": "职场汇报术语",
+    "meaning": "站点可靠性工程师，用软件工程方法解决运维问题",
+    "scene": "线上告警了，SRE 已经在看，你先别慌，等他们定位到问题再说。",
+    "aliases": [
+      "站点可靠性工程师"
+    ],
+    "related": [
+      "DevOps",
+      "monitor",
+      "SLA"
+    ]
+  },
+  {
+    "id": 146,
+    "term": "DevOps",
+    "fullName": "Development + Operations",
+    "category": "职场汇报术语",
+    "meaning": "开发运维一体化，打破开发和运维之间的壁垒",
+    "scene": "我们团队 DevOps 做得比较好，代码提交后 CI/CD 自动构建部署，不用人工操作。",
+    "aliases": [
+      "开发运维"
+    ],
+    "related": [
+      "CI/CD",
+      "SRE",
+      "deploy"
+    ]
+  },
+  {
+    "id": 147,
+    "term": "LLM",
+    "fullName": "Large Language Model",
+    "category": "编程开发",
+    "meaning": "大语言模型，基于海量文本训练的 AI 模型",
+    "scene": "现在开发效率高多了，写代码有 LLM 辅助，很多模板代码不用手敲了。",
+    "aliases": [
+      "大语言模型",
+      "大模型"
+    ],
+    "related": [
+      "AI",
+      "prompt",
+      "RAG"
+    ]
+  },
+  {
+    "id": 148,
+    "term": "prompt",
+    "fullName": "prompt engineering",
+    "category": "编程开发",
+    "meaning": "提示词工程，设计有效的输入指令来引导 AI 输出期望的结果",
+    "scene": "调了半天的 prompt 模板，AI 生成的结果终于稳定可用了。",
+    "aliases": [
+      "提示词",
+      "提示工程"
+    ],
+    "related": [
+      "LLM",
+      "RAG",
+      "AI"
+    ]
+  },
+  {
+    "id": 149,
+    "term": "RAG",
+    "fullName": "Retrieval-Augmented Generation",
+    "category": "编程开发",
+    "meaning": "检索增强生成，先检索外部知识库再将结果提供给 LLM 生成回答",
+    "scene": "内部文档问答用了 RAG，先把相关文档片段检索出来喂给 LLM，回答准确多了。",
+    "aliases": [
+      "检索增强生成"
+    ],
+    "related": [
+      "LLM",
+      "prompt",
+      "embedding"
+    ]
+  },
+  {
+    "id": 150,
+    "term": "hallucination",
+    "fullName": "AI hallucination",
+    "category": "编程开发",
+    "meaning": "AI 幻觉，AI 模型生成的内容表面上合理但实际是错误的",
+    "scene": "LLM 生成的那段代码看着像模像样，但调用的 API 根本不存在——这是 hallucination。",
+    "aliases": [
+      "幻觉",
+      "AI幻觉"
+    ],
+    "related": [
+      "LLM",
+      "RAG",
+      "prompt"
+    ]
+  },
+  {
+    "id": 151,
+    "term": "hardcode",
+    "fullName": "hardcode",
+    "category": "编程开发",
+    "meaning": "硬编码，把配置或数据直接写死在代码里",
+    "scene": "API 地址别 hardcode 在代码里，写成环境变量，不然换环境就要重新打包。",
+    "aliases": [
+      "硬编码",
+      "写死"
+    ],
+    "related": [
+      "refactor",
+      "tech debt",
+      "config"
+    ]
+  },
+  {
+    "id": 152,
+    "term": "polyfill",
+    "fullName": "polyfill",
+    "category": "编程开发",
+    "meaning": "腻子脚本，为旧浏览器提供现代 API 的兼容实现",
+    "scene": "IE11 不支持 Promise，加个 polyfill 就行了，不用改业务代码。",
+    "aliases": [
+      "腻子脚本",
+      "兼容补丁"
+    ],
+    "related": [
+      "transpile",
+      "browser"
+    ]
+  },
+  {
+    "id": 153,
+    "term": "tree shaking",
+    "fullName": "tree shaking",
+    "category": "编程开发",
+    "meaning": "摇树优化，打包时自动删除未使用的代码",
+    "scene": "打包产物 500K 太大了，查一下是不是 tree shaking 没生效，把没用到的库打进去了。",
+    "aliases": [
+      "摇树优化",
+      "死代码消除"
+    ],
+    "related": [
+      "build",
+      "performance",
+      "bundle"
+    ]
+  },
+  {
+    "id": 154,
+    "term": "stale",
+    "fullName": "stale / stale bot",
+    "category": "编程开发",
+    "meaning": "过期/陈旧，常见于 GitHub 上长时间未活动的 Issue 或 PR 被标记为 stale",
+    "scene": "这个 PR 三个月没人 review，被 stale bot 关了，重开一个吧。",
+    "aliases": [
+      "过期",
+      "陈旧"
+    ],
+    "related": [
+      "PR",
+      "GitHub"
+    ]
+  },
+  {
+    "id": 155,
+    "term": "oncall",
+    "fullName": "on-call rotation",
+    "category": "编程开发",
+    "meaning": "值班轮岗，指定时间段内由某人负责处理线上紧急问题",
+    "scene": "这周我 oncall，凌晨三点告警响了也得爬起来看——希望别出事。",
+    "aliases": [
+      "值班",
+      "on-call"
+    ],
+    "related": [
+      "SRE",
+      "monitor",
+      "hotfix"
+    ]
+  },
+  {
+    "id": 156,
+    "term": "Shopify",
+    "fullName": "Shopify",
+    "category": "外贸电商",
+    "meaning": "全球最大的跨境电商独立站建站平台",
+    "scene": "做独立站首选 Shopify，月租 29 刀起，插件生态很全，不用懂代码也能开店。",
+    "aliases": [],
+    "related": [
+      "dropshipping",
+      "PayPal",
+      "Stripe"
+    ]
+  },
+  {
+    "id": 157,
+    "term": "bundle",
+    "fullName": "product bundle",
+    "category": "外贸电商",
+    "meaning": "捆绑销售，将多个产品打包组合出售",
+    "scene": "把手机壳和钢化膜做成一个 bundle，客单价提高了 12 刀。",
+    "aliases": [
+      "捆绑",
+      "套装"
+    ],
+    "related": [
+      "SKU",
+      "upsell"
+    ]
+  },
+  {
+    "id": 158,
+    "term": "Visa",
+    "fullName": "Visa",
+    "category": "外贸电商",
+    "meaning": "全球最大的信用卡支付网络之一",
+    "scene": "独立站一定要接 Visa 和 Mastercard，这两个占了欧美 80% 以上的信用卡支付。",
+    "aliases": [],
+    "related": [
+      "Mastercard",
+      "PayPal",
+      "chargeback"
+    ]
+  },
+  {
+    "id": 159,
+    "term": "Mastercard",
+    "fullName": "Mastercard",
+    "category": "外贸电商",
+    "meaning": "全球第二大信用卡支付网络",
+    "scene": "Visa 和 Mastercard 都接了，再加个 PayPal，基本上全球客户都能付了。",
+    "aliases": [],
+    "related": [
+      "Visa",
+      "PayPal",
+      "Stripe"
+    ]
+  },
+  {
+    "id": 160,
+    "term": "PayPal",
+    "fullName": "PayPal",
+    "category": "外贸电商",
+    "meaning": "全球最流行的在线支付平台，支持多币种",
+    "scene": "客户说信用卡付不了，让他试 PayPal，老外基本人手一个账号。",
+    "aliases": [
+      "贝宝",
+      "PP"
+    ],
+    "related": [
+      "Stripe",
+      "Visa",
+      "chargeback"
+    ]
+  },
+  {
+    "id": 161,
+    "term": "Stripe",
+    "fullName": "Stripe",
+    "category": "外贸电商",
+    "meaning": "面向开发者的在线支付处理平台，API 友好",
+    "scene": "独立站用 Stripe 收信用卡特别方便，API 文档写得比 PayPal 好太多了。",
+    "aliases": [],
+    "related": [
+      "PayPal",
+      "Visa",
+      "Mastercard"
+    ]
+  },
+  {
+    "id": 162,
+    "term": "FOB",
+    "fullName": "Free On Board",
+    "category": "外贸电商",
+    "meaning": "离岸价，卖方在装运港交货后风险转移给买方",
+    "scene": "报价单上写的是 FOB 深圳，运费和保险买方自己负责。",
+    "aliases": [
+      "离岸价"
+    ],
+    "related": [
+      "CIF",
+      "shipping",
+      "customs"
+    ]
+  },
+  {
+    "id": 163,
+    "term": "CIF",
+    "fullName": "Cost, Insurance and Freight",
+    "category": "外贸电商",
+    "meaning": "到岸价，卖方承担成本、保险费和运费直到目的港",
+    "scene": "客户要求 CIF 洛杉矶，报价要含运费和保险，比 FOB 贵不少。",
+    "aliases": [
+      "到岸价"
+    ],
+    "related": [
+      "FOB",
+      "shipping",
+      "tariff"
+    ]
+  },
+  {
+    "id": 164,
+    "term": "B2B",
+    "fullName": "Business to Business",
+    "category": "外贸电商",
+    "meaning": "企业对企业的商业模式（批发/大宗交易）",
+    "scene": "我们是 B2B 模式，最小起订量 500 件，不做零售。",
+    "aliases": [
+      "企业对企业"
+    ],
+    "related": [
+      "B2C",
+      "wholesale",
+      "MOQ"
+    ]
+  },
+  {
+    "id": 165,
+    "term": "B2C",
+    "fullName": "Business to Consumer",
+    "category": "外贸电商",
+    "meaning": "企业对消费者的商业模式（零售）",
+    "scene": "亚马逊上基本是 B2C，一个客户买一两件的那种。",
+    "aliases": [
+      "企业对消费者"
+    ],
+    "related": [
+      "B2B",
+      "retail"
+    ]
+  },
+  {
+    "id": 166,
+    "term": "SKU",
+    "fullName": "Stock Keeping Unit",
+    "category": "外贸电商",
+    "meaning": "库存量单位，每个产品的唯一编码",
+    "scene": "这款 T 恤有 3 个颜色 4 个尺码，一共 12 个 SKU，每个 SKU 库存要对清楚。",
+    "aliases": [
+      "货号"
+    ],
+    "related": [
+      "inventory",
+      "bundle"
+    ]
+  },
+  {
+    "id": 167,
+    "term": "dropshipping",
+    "fullName": "dropshipping",
+    "category": "外贸电商",
+    "meaning": "一件代发，不囤货，出单后由供应商直接发货给客户",
+    "scene": "刚开始做跨境电商建议从 dropshipping 入门，不用压库存，风险小很多。",
+    "aliases": [
+      "一件代发",
+      "代发"
+    ],
+    "related": [
+      "Shopify",
+      "supplier",
+      "fulfillment"
+    ]
+  },
+  {
+    "id": 168,
+    "term": "fulfillment",
+    "fullName": "order fulfillment",
+    "category": "外贸电商",
+    "meaning": "订单履约，从接单到发货到签收的完整流程",
+    "scene": "我们用第三方海外仓做 fulfillment，客户下单后 3 天内美国本土送达。",
+    "aliases": [
+      "履约",
+      "仓储配送"
+    ],
+    "related": [
+      "dropshipping",
+      "shipping",
+      "warehouse"
+    ]
+  },
+  {
+    "id": 169,
+    "term": "MOQ",
+    "fullName": "Minimum Order Quantity",
+    "category": "外贸电商",
+    "meaning": "最小起订量，供应商愿意接单的最低数量",
+    "scene": "这个供应商 MOQ 是 1000 件，量太小人家不接。",
+    "aliases": [
+      "最小起订量"
+    ],
+    "related": [
+      "B2B",
+      "wholesale",
+      "supplier"
+    ]
+  },
+  {
+    "id": 170,
+    "term": "OEM",
+    "fullName": "Original Equipment Manufacturer",
+    "category": "外贸电商",
+    "meaning": "贴牌代工，工厂生产贴上你的品牌",
+    "scene": "找工厂做 OEM，用他们的模具但印我们的 Logo，成本比 ODM 低。",
+    "aliases": [
+      "贴牌",
+      "代工"
+    ],
+    "related": [
+      "ODM",
+      "supplier",
+      "MOQ"
+    ]
+  },
+  {
+    "id": 171,
+    "term": "ODM",
+    "fullName": "Original Design Manufacturer",
+    "category": "外贸电商",
+    "meaning": "设计代工，工厂既设计又生产，你选款贴牌",
+    "scene": "没自己的设计师？直接找 ODM 工厂，他们出款式你选品就行。",
+    "aliases": [
+      "设计代工"
+    ],
+    "related": [
+      "OEM",
+      "supplier"
+    ]
+  },
+  {
+    "id": 172,
+    "term": "lead time",
+    "fullName": "lead time",
+    "category": "外贸电商",
+    "meaning": "交货周期，从下单到收到货的时间",
+    "scene": "工厂说 lead time 要 30 天，加上海运 20 天，至少提前两个月备货。",
+    "aliases": [
+      "交货期",
+      "交期"
+    ],
+    "related": [
+      "supplier",
+      "shipping",
+      "MOQ"
+    ]
+  },
+  {
+    "id": 173,
+    "term": "PI",
+    "fullName": "Proforma Invoice",
+    "category": "外贸电商",
+    "meaning": "形式发票，确认订单价格和条款的预发票",
+    "scene": "客户确认后先发 PI 给他，上面列清楚产品、数量、价格、付款方式。",
+    "aliases": [
+      "形式发票"
+    ],
+    "related": [
+      "invoice",
+      "quotation"
+    ]
+  },
+  {
+    "id": 174,
+    "term": "B/L",
+    "fullName": "Bill of Lading",
+    "category": "外贸电商",
+    "meaning": "提单，海运中最重要的物权凭证",
+    "scene": "货代寄来的 B/L 要保管好，没有这个客户没法在目的港提货。",
+    "aliases": [
+      "提单"
+    ],
+    "related": [
+      "shipping",
+      "customs",
+      "FOB"
+    ]
+  },
+  {
+    "id": 175,
+    "term": "customs",
+    "fullName": "customs clearance",
+    "category": "外贸电商",
+    "meaning": "海关 / 清关，货物进出境必须经过的申报审查流程",
+    "scene": "这票货卡在 customs 了，HS code 申报有问题，要补交关税才能放行。",
+    "aliases": [
+      "海关",
+      "清关"
+    ],
+    "related": [
+      "tariff",
+      "HS code",
+      "B/L"
+    ]
+  },
+  {
+    "id": 176,
+    "term": "tariff",
+    "fullName": "tariff / customs duty",
+    "category": "外贸电商",
+    "meaning": "关税，进出口商品需要缴纳的税费",
+    "scene": "美国对 301 目录里的产品 tariff 加到了 25%，利润基本被吃光了。",
+    "aliases": [
+      "关税"
+    ],
+    "related": [
+      "customs",
+      "HS code"
+    ]
+  },
+  {
+    "id": 177,
+    "term": "HS code",
+    "fullName": "Harmonized System Code",
+    "category": "外贸电商",
+    "meaning": "海关编码，国际上统一使用的商品分类代码",
+    "scene": "报关的时候 HS code 别填错了，电子产品归 85 章，填成纺织品要补税。",
+    "aliases": [
+      "海关编码"
+    ],
+    "related": [
+      "customs",
+      "tariff"
+    ]
+  },
+  {
+    "id": 178,
+    "term": "chargeback",
+    "fullName": "chargeback",
+    "category": "外贸电商",
+    "meaning": "拒付/退单，持卡人向发卡行申请撤销已完成的交易",
+    "scene": "老外收到货说不认识这笔消费申请了 chargeback，PayPal 直接把钱退回去了，亏了货又亏了钱。",
+    "aliases": [
+      "拒付",
+      "退单"
+    ],
+    "related": [
+      "PayPal",
+      "refund",
+      "dispute"
+    ]
+  },
+  {
+    "id": 179,
+    "term": "dispute",
+    "fullName": "dispute / chargeback dispute",
+    "category": "外贸电商",
+    "meaning": "交易争议/纠纷，买卖双方对订单有分歧",
+    "scene": "PayPal 收到 dispute 了，赶紧把发货证明和聊天记录提交上去，不然钱就退了。",
+    "aliases": [
+      "争议",
+      "纠纷"
+    ],
+    "related": [
+      "chargeback",
+      "refund",
+      "PayPal"
+    ]
+  },
+  {
+    "id": 180,
+    "term": "conversion rate",
+    "fullName": "conversion rate / CVR",
+    "category": "外贸电商",
+    "meaning": "转化率，访问用户中完成购买的比例",
+    "scene": "广告跑了一天 500 个点击 0 单，conversion rate 是 0，落地页肯定有问题。",
+    "aliases": [
+      "转化率",
+      "CVR"
+    ],
+    "related": [
+      "CTR",
+      "ROI",
+      "GMV"
+    ]
+  },
+  {
+    "id": 181,
+    "term": "CTR",
+    "fullName": "Click Through Rate",
+    "category": "外贸电商",
+    "meaning": "点击率，看到广告的人中有多少点击了",
+    "scene": "广告 CTR 才 0.5%，太低了，换张素材图试试。",
+    "aliases": [
+      "点击率"
+    ],
+    "related": [
+      "conversion rate",
+      "ROI"
+    ]
+  },
+  {
+    "id": 182,
+    "term": "ROI",
+    "fullName": "Return On Investment",
+    "category": "外贸电商",
+    "meaning": "投资回报率，投入产出比",
+    "scene": "广告花了 300 刀，出了 1500 刀的货，ROI 1:5，可以加大预算了。",
+    "aliases": [
+      "投资回报率",
+      "投入产出比"
+    ],
+    "related": [
+      "conversion rate",
+      "GMV"
+    ]
+  },
+  {
+    "id": 183,
+    "term": "GMV",
+    "fullName": "Gross Merchandise Volume",
+    "category": "外贸电商",
+    "meaning": "商品交易总额，平台上一段时间内的总成交额",
+    "scene": "黑五当天 GMV 破了 10 万刀，比去年翻了 3 倍。",
+    "aliases": [
+      "交易额",
+      "成交额"
+    ],
+    "related": [
+      "conversion rate",
+      "ROI"
+    ]
+  },
+  {
+    "id": 184,
+    "term": "niche",
+    "fullName": "niche market",
+    "category": "外贸电商",
+    "meaning": "利基市场，大市场中被忽略的细分领域",
+    "scene": "别卖手机壳了太卷了，找个 niche 市场比如宠物轮椅，竞争小利润高。",
+    "aliases": [
+      "利基",
+      "细分市场"
+    ],
+    "related": [
+      "supplier",
+      "dropshipping"
+    ]
+  },
+  {
+    "id": 185,
+    "term": "sourcing",
+    "fullName": "product sourcing",
+    "category": "外贸电商",
+    "meaning": "采购/找货源",
+    "scene": "这周主要做 sourcing，在 1688 和义乌市场找能做我们这款包的工厂。",
+    "aliases": [
+      "采购",
+      "找货"
+    ],
+    "related": [
+      "supplier",
+      "OEM",
+      "MOQ"
+    ]
+  },
+  {
+    "id": 186,
+    "term": "supplier",
+    "fullName": "supplier",
+    "category": "外贸电商",
+    "meaning": "供应商/工厂",
+    "scene": "这个 supplier 合作三年了，质量稳定交期准时，就是价格比别人贵一点。",
+    "aliases": [
+      "供应商",
+      "工厂"
+    ],
+    "related": [
+      "sourcing",
+      "MOQ",
+      "OEM"
+    ]
+  },
+  {
+    "id": 187,
+    "term": "wholesale",
+    "fullName": "wholesale",
+    "category": "外贸电商",
+    "meaning": "批发，大批量低价销售给中间商",
+    "scene": "wholesale 价格是零售价的 40%，但要求单款起订 200 件以上。",
+    "aliases": [
+      "批发"
+    ],
+    "related": [
+      "B2B",
+      "MOQ",
+      "retail"
+    ]
+  },
+  {
+    "id": 188,
+    "term": "shipping",
+    "fullName": "shipping",
+    "category": "外贸电商",
+    "meaning": "物流/运输",
+    "scene": "shipping 方式选了海运，虽然慢但是便宜，空运的话运费比货值还高。",
+    "aliases": [
+      "物流",
+      "运输"
+    ],
+    "related": [
+      "FOB",
+      "CIF",
+      "tracking"
+    ]
+  },
+  {
+    "id": 189,
+    "term": "tracking",
+    "fullName": "tracking number",
+    "category": "外贸电商",
+    "meaning": "物流单号，用于追踪包裹运输状态",
+    "scene": "发货后第一时间把 tracking number 填到 Shopify 后台，客户那边会自动收到邮件。",
+    "aliases": [
+      "单号",
+      "物流单号"
+    ],
+    "related": [
+      "shipping",
+      "dispute"
+    ]
+  },
+  {
+    "id": 190,
+    "term": "refund",
+    "fullName": "refund",
+    "category": "外贸电商",
+    "meaning": "退款",
+    "scene": "客户收到货说有瑕疵，拍了照片确认后直接 refund 了，比 dispute 强。",
+    "aliases": [
+      "退款"
+    ],
+    "related": [
+      "chargeback",
+      "dispute",
+      "PayPal"
+    ]
+  },
+  {
+    "id": 191,
+    "term": "quotation",
+    "fullName": "quotation / quote",
+    "category": "外贸电商",
+    "meaning": "报价单",
+    "scene": "客户询盘了，先发个 quotation 过去，列明规格、数量、FOB 价格和交期。",
+    "aliases": [
+      "报价",
+      "报价单"
+    ],
+    "related": [
+      "PI",
+      "FOB",
+      "supplier"
+    ]
+  },
+  {
+    "id": 192,
+    "term": "warehouse",
+    "fullName": "warehouse",
+    "category": "外贸电商",
+    "meaning": "仓库/仓储",
+    "scene": "旺季前要把货提前备到美国 warehouse，不然黑五物流根本来不及。",
+    "aliases": [
+      "仓库",
+      "仓储"
+    ],
+    "related": [
+      "fulfillment",
+      "shipping",
+      "inventory"
+    ]
+  },
+  {
+    "id": 193,
+    "term": "inventory",
+    "fullName": "inventory",
+    "category": "外贸电商",
+    "meaning": "库存",
+    "scene": "SKU 太多了 inventory 管不过来，经常超卖被客户投诉，得上个 ERP 系统。",
+    "aliases": [
+      "库存",
+      "存货"
+    ],
+    "related": [
+      "SKU",
+      "warehouse"
+    ]
+  },
+  {
+    "id": 194,
+    "term": "upsell",
+    "fullName": "upselling",
+    "category": "外贸电商",
+    "meaning": "追加销售，引导客户购买更贵或更多的产品",
+    "scene": "客户加购了剃须刀，弹窗 upsell 一个替换刀头套装，成交率 15%。",
+    "aliases": [
+      "追加销售",
+      "加购推荐"
+    ],
+    "related": [
+      "bundle",
+      "conversion rate"
+    ]
+  },
+  {
+    "id": 195,
+    "term": "Amazon",
+    "fullName": "Amazon",
+    "category": "外贸电商",
+    "meaning": "全球最大的电商平台",
+    "scene": "做跨境绕不开 Amazon，FBA 入仓后 Prime 会员两天达，转化率比自己独立站高多了。",
+    "aliases": [
+      "亚马逊"
+    ],
+    "related": [
+      "Shopify",
+      "FBA",
+      "B2C"
+    ]
+  },
+  {
+    "id": 196,
+    "term": "FBA",
+    "fullName": "Fulfillment by Amazon",
+    "category": "外贸电商",
+    "meaning": "亚马逊物流服务，卖家把货发到亚马逊仓库，由亚马逊负责发货和售后",
+    "scene": "做了 FBA 之后单量涨了 50%，Prime 用户就是冲着两天达来的。",
+    "aliases": [
+      "亚马逊物流"
+    ],
+    "related": [
+      "Amazon",
+      "fulfillment",
+      "warehouse"
+    ]
+  },
+  {
+    "id": 197,
+    "term": "retail",
+    "fullName": "retail",
+    "category": "外贸电商",
+    "meaning": "零售，直接面向终端消费者销售",
+    "scene": "retail 价一般是成本价的 3-5 倍，中间要覆盖运费、平台费、广告和退货损耗。",
+    "aliases": [
+      "零售"
+    ],
+    "related": [
+      "wholesale",
+      "B2C"
+    ]
+  },
+  {
+    "id": 198,
+    "term": "branding",
+    "fullName": "branding",
+    "category": "外贸电商",
+    "meaning": "品牌建设，打造品牌的整体形象和认知",
+    "scene": "别光卖白牌货，花点时间做 branding，Logo、包装、社媒统一风格，溢价空间大很多。",
+    "aliases": [
+      "品牌化"
+    ],
+    "related": [
+      "OEM",
+      "niche"
+    ]
+  },
+  {
+    "id": 199,
+    "term": "LOL",
+    "fullName": "Laugh Out Loud",
+    "category": "日常聊天缩写",
+    "meaning": "哈哈大笑",
+    "scene": "看到你发的那个 meme 笑死我了，LOL！",
+    "aliases": [
+      "lol",
+      "哈哈"
+    ],
+    "related": [
+      "LMAO",
+      "ROFL"
+    ]
+  },
+  {
+    "id": 200,
+    "term": "LMAO",
+    "fullName": "Laughing My Ass Off",
+    "category": "日常聊天缩写",
+    "meaning": "笑死我了（比 LOL 程度更强烈）",
+    "scene": "那个客户发来的需求文档翻了三页才发现是空白的，LMAO！",
+    "aliases": [
+      "lmao"
+    ],
+    "related": [
+      "LOL",
+      "ROFL"
+    ]
+  },
+  {
+    "id": 201,
+    "term": "BRB",
+    "fullName": "Be Right Back",
+    "category": "日常聊天缩写",
+    "meaning": "马上回来",
+    "scene": "BRB，去倒杯咖啡，两分钟。",
+    "aliases": [
+      "brb"
+    ],
+    "related": [
+      "AFK",
+      "TTYL"
+    ]
+  },
+  {
+    "id": 202,
+    "term": "BTW",
+    "fullName": "By The Way",
+    "category": "日常聊天缩写",
+    "meaning": "顺便说一下 / 对了",
+    "scene": "BTW，刚才提到的那份报告我发你邮箱了，有空帮我看一眼。",
+    "aliases": [
+      "btw",
+      "顺便"
+    ],
+    "related": [
+      "FYI",
+      "IMO"
+    ]
+  },
+  {
+    "id": 203,
+    "term": "TBH",
+    "fullName": "To Be Honest",
+    "category": "日常聊天缩写",
+    "meaning": "说实话 / 讲真",
+    "scene": "TBH，这个方案的时间线太紧了，两周肯定做不完。",
+    "aliases": [
+      "tbh",
+      "说实话"
+    ],
+    "related": [
+      "IMO",
+      "NGL"
+    ]
+  },
+  {
+    "id": 204,
+    "term": "IDK",
+    "fullName": "I Don't Know",
+    "category": "日常聊天缩写",
+    "meaning": "我不知道",
+    "scene": "IDK 这个 bug 是谁引入的，得 git blame 看一下。",
+    "aliases": [
+      "idk"
+    ],
+    "related": [
+      "AFAIK"
+    ]
+  },
+  {
+    "id": 205,
+    "term": "GM",
+    "fullName": "Good Morning",
+    "category": "日常聊天缩写",
+    "meaning": "早上好",
+    "scene": "GM everyone! 今天的 standup 我先来汇报一下昨天的进度。",
+    "aliases": [
+      "gm",
+      "早安"
+    ],
+    "related": [
+      "GN",
+      "standup"
+    ]
+  },
+  {
+    "id": 206,
+    "term": "GN",
+    "fullName": "Good Night",
+    "category": "日常聊天缩写",
+    "meaning": "晚安",
+    "scene": "加班到现在扛不住了，GN all，明天继续。",
+    "aliases": [
+      "gn"
+    ],
+    "related": [
+      "GM"
+    ]
+  },
+  {
+    "id": 207,
+    "term": "BB",
+    "fullName": "Bye Bye",
+    "category": "日常聊天缩写",
+    "meaning": "拜拜/再见",
+    "scene": "下班了，BB guys, see you tomorrow!",
+    "aliases": [
+      "bibi",
+      "88"
+    ],
+    "related": [
+      "TTYL",
+      "GN"
+    ]
+  },
+  {
+    "id": 208,
+    "term": "THX",
+    "fullName": "Thanks / Thank You",
+    "category": "日常聊天缩写",
+    "meaning": "谢谢",
+    "scene": "THX for the quick review! 你的反馈已经改好了。",
+    "aliases": [
+      "thx",
+      "3q",
+      "TY",
+      "thanks",
+      "thank you"
+    ],
+    "related": [
+      "NP",
+      "YW"
+    ]
+  },
+  {
+    "id": 209,
+    "term": "NP",
+    "fullName": "No Problem",
+    "category": "日常聊天缩写",
+    "meaning": "没事/不客气",
+    "scene": "A: Thanks for helping debug that issue. B: NP, happy to help!",
+    "aliases": [
+      "np",
+      "不客气"
+    ],
+    "related": [
+      "THX",
+      "YW"
+    ]
+  },
+  {
+    "id": 210,
+    "term": "NVM",
+    "fullName": "Never Mind",
+    "category": "日常聊天缩写",
+    "meaning": "算了/当我没说",
+    "scene": "刚想问怎么部署来着，NVM，文档里翻到了。",
+    "aliases": [
+      "nvm",
+      "算了"
+    ],
+    "related": [
+      "IDK"
+    ]
+  },
+  {
+    "id": 211,
+    "term": "OMG",
+    "fullName": "Oh My God / Oh My Gosh",
+    "category": "日常聊天缩写",
+    "meaning": "我的天哪（表达惊讶/震惊）",
+    "scene": "OMG 这个接口的 P99 延迟居然到了 8 秒！赶紧加监控告警。",
+    "aliases": [
+      "omg"
+    ],
+    "related": [
+      "WTF"
+    ]
+  },
+  {
+    "id": 212,
+    "term": "TTYL",
+    "fullName": "Talk To You Later",
+    "category": "日常聊天缩写",
+    "meaning": "回头聊/晚点再说",
+    "scene": "要去开会了，TTYL！有急事 ping 我。",
+    "aliases": [
+      "ttyl",
+      "回头聊"
+    ],
+    "related": [
+      "BB",
+      "BRB"
+    ]
+  },
+  {
+    "id": 213,
+    "term": "DM",
+    "fullName": "Direct Message",
+    "category": "日常聊天缩写",
+    "meaning": "私信/私聊",
+    "scene": "这个问题太细节了别在群里聊，DM 我吧。",
+    "aliases": [
+      "dm",
+      "私信",
+      "PM"
+    ],
+    "related": [
+      "PM",
+      "offline"
+    ]
+  },
+  {
+    "id": 214,
+    "term": "AMA",
+    "fullName": "Ask Me Anything",
+    "category": "日常聊天缩写",
+    "meaning": "尽管问/什么都答（常用于问答活动）",
+    "scene": "新来的 CTO 下周开个 AMA，有什么想了解的直接问。",
+    "aliases": [
+      "ama"
+    ],
+    "related": [
+      "Q&A",
+      "FAQ"
+    ]
+  },
+  {
+    "id": 215,
+    "term": "AFK",
+    "fullName": "Away From Keyboard",
+    "category": "日常聊天缩写",
+    "meaning": "暂时离开（不在电脑前）",
+    "scene": "AFK 吃个午饭，一小时后回来，有问题先留言。",
+    "aliases": [
+      "afk",
+      "不在"
+    ],
+    "related": [
+      "BRB",
+      "OOO"
+    ]
+  },
+  {
+    "id": 216,
+    "term": "AFAIK",
+    "fullName": "As Far As I Know",
+    "category": "日常聊天缩写",
+    "meaning": "据我所知",
+    "scene": "AFAIK 这个需求还没有排进任何一个 sprint 里，可以先去问下 PM。",
+    "aliases": [
+      "afaik"
+    ],
+    "related": [
+      "IMO",
+      "IDK"
+    ]
+  },
+  {
+    "id": 217,
+    "term": "SMH",
+    "fullName": "Shaking My Head",
+    "category": "日常聊天缩写",
+    "meaning": "摇头叹气（表达无奈/失望）",
+    "scene": "又有人在 main 分支上直接 push 代码了……SMH。",
+    "aliases": [
+      "smh"
+    ],
+    "related": [
+      "OMG",
+      "facepalm"
+    ]
+  },
+  {
+    "id": 218,
+    "term": "IKR",
+    "fullName": "I Know, Right?",
+    "category": "日常聊天缩写",
+    "meaning": "我也这么觉得！/是吧！",
+    "scene": "A: 这个功能的需求文档写得也太模糊了。B: IKR！完全不知道产品想要什么。",
+    "aliases": [
+      "ikr"
+    ],
+    "related": [
+      "TBH",
+      "NGL"
+    ]
+  },
+  {
+    "id": 219,
+    "term": "FR",
+    "fullName": "For Real",
+    "category": "日常聊天缩写",
+    "meaning": "真的/说真的（强调或同意）",
+    "scene": "A: 这个季度加班也太多了。B: FR，已经连续三周没双休了。",
+    "aliases": [
+      "fr",
+      "真的"
+    ],
+    "related": [
+      "TBH",
+      "NGL"
+    ]
+  },
+  {
+    "id": 220,
+    "term": "NGL",
+    "fullName": "Not Gonna Lie",
+    "category": "日常聊天缩写",
+    "meaning": "不骗你/老实说",
+    "scene": "NGL，你这个 PR 写得确实比我想象中好多了。",
+    "aliases": [
+      "ngl"
+    ],
+    "related": [
+      "TBH",
+      "FR"
+    ]
+  },
+  {
+    "id": 221,
+    "term": "FOMO",
+    "fullName": "Fear Of Missing Out",
+    "category": "日常聊天缩写",
+    "meaning": "错失恐惧症，害怕错过重要信息或机会",
+    "scene": "同事都在学 AI，我还没开始，有点 FOMO 了。",
+    "aliases": [
+      "fomo",
+      "错失恐惧症"
+    ],
+    "related": [
+      "YOLO"
+    ]
+  },
+  {
+    "id": 222,
+    "term": "TGIF",
+    "fullName": "Thank God It's Friday",
+    "category": "日常聊天缩写",
+    "meaning": "感谢上帝，终于周五了！",
+    "scene": "TGIF！这周上了四个 hotfix，周末谁也别找我。",
+    "aliases": [
+      "tgif"
+    ],
+    "related": [
+      "GM",
+      "OOO"
+    ]
+  },
+  {
+    "id": 223,
+    "term": "OOO",
+    "fullName": "Out Of Office",
+    "category": "日常聊天缩写",
+    "meaning": "不在办公室（休假/出差）",
+    "scene": "下周 OOO 去休假，紧急事务找 @张三，邮件会自动回复。",
+    "aliases": [
+      "ooo",
+      "休假"
+    ],
+    "related": [
+      "AFK",
+      "EOD"
+    ]
+  },
+  {
+    "id": 224,
+    "term": "EOD",
+    "fullName": "End Of Day",
+    "category": "日常聊天缩写",
+    "meaning": "今天下班前/今天之内",
+    "scene": "这个报表 EOD 前要发给 CFO，优先级最高。",
+    "aliases": [
+      "eod",
+      "今天之内"
+    ],
+    "related": [
+      "ETA",
+      "OOO"
+    ]
+  },
+  {
+    "id": 225,
+    "term": "ETA",
+    "fullName": "Estimated Time of Arrival",
+    "category": "日常聊天缩写",
+    "meaning": "预计到达时间 / 预计完成时间",
+    "scene": "功能开发完了，bug 修好了，ETA 明天中午部署。",
+    "aliases": [
+      "eta",
+      "预计时间"
+    ],
+    "related": [
+      "EOD",
+      "lead time"
+    ]
+  },
+  {
+    "id": 226,
+    "term": "POV",
+    "fullName": "Point Of View",
+    "category": "日常聊天缩写",
+    "meaning": "观点/视角",
+    "scene": "从后端 POV 看这个方案没问题，但前端那边可能会有兼容性问题。",
+    "aliases": [
+      "pov",
+      "视角"
+    ],
+    "related": [
+      "IMO",
+      "context"
+    ]
+  },
+  {
+    "id": 227,
+    "term": "FAQ",
+    "fullName": "Frequently Asked Questions",
+    "category": "日常聊天缩写",
+    "meaning": "常见问题解答",
+    "scene": "新手上手指南和 FAQ 都写在 Wiki 上了，先去看看再来问。",
+    "aliases": [
+      "faq",
+      "常见问题"
+    ],
+    "related": [
+      "AMA",
+      "RTFM"
+    ]
+  },
+  {
+    "id": 228,
+    "term": "GOAT",
+    "fullName": "Greatest Of All Time",
+    "category": "日常聊天缩写",
+    "meaning": "史上最佳/永远的神",
+    "scene": "这个程序员一个人维护了 5 个核心服务三年没出过大事故，GOAT！",
+    "aliases": [
+      "goat",
+      "YYDS"
+    ],
+    "related": [
+      "LOL"
+    ]
+  },
+  {
+    "id": 229,
+    "term": "TIL",
+    "fullName": "Today I Learned",
+    "category": "日常聊天缩写",
+    "meaning": "今天学到的新东西",
+    "scene": "TIL：Ctrl+Shift+V 可以无格式粘贴，用了这么多年电脑居然不知道。",
+    "aliases": [
+      "til"
+    ],
+    "related": [
+      "FYI",
+      "PSA"
+    ]
+  },
+  {
+    "id": 230,
+    "term": "IKYFL",
+    "fullName": "I Know You F***ing Lying",
+    "category": "日常聊天缩写",
+    "meaning": "你逗我呢吧/这不可能",
+    "scene": "产品经理说这个功能很简单半天就能做完……IKYFL！",
+    "aliases": [
+      "ikyfl"
+    ],
+    "related": [
+      "SMH",
+      "OMG"
+    ]
+  },
+  {
+    "id": 231,
+    "term": "ROFL",
+    "fullName": "Rolling On the Floor Laughing",
+    "category": "日常聊天缩写",
+    "meaning": "笑得满地打滚",
+    "scene": "看到有人在生产数据库跑 DELETE 没加 WHERE，ROFL……等等，那是我们的生产库？！",
+    "aliases": [
+      "rofl",
+      "笑死了"
+    ],
+    "related": [
+      "LOL",
+      "LMAO"
+    ]
+  },
+  {
+    "id": 232,
+    "term": "WTF",
+    "fullName": "What The F***",
+    "category": "日常聊天缩写",
+    "meaning": "搞什么鬼/什么情况（表达震惊或愤怒）",
+    "scene": "WTF！谁把主分支的 CI 配置改坏了，所有人的 PR 都跑不过了！",
+    "aliases": [
+      "wtf"
+    ],
+    "related": [
+      "OMG",
+      "SMH"
+    ]
+  },
+  {
+    "id": 233,
+    "term": "YW",
+    "fullName": "You're Welcome",
+    "category": "日常聊天缩写",
+    "meaning": "不客气",
+    "scene": "A: Thanks for the help! B: YW, anytime!",
+    "aliases": [
+      "yw"
+    ],
+    "related": [
+      "THX",
+      "NP"
+    ]
+  },
+  {
+    "id": 234,
+    "term": "SFLR",
+    "fullName": "Sorry For Late Reply",
+    "category": "日常聊天缩写",
+    "meaning": "抱歉回复晚了",
+    "scene": "SFLR，昨天在赶一个紧急需求没看消息，你问的那个问题现在解决了吗？",
+    "aliases": [
+      "sflr"
+    ],
+    "related": [
+      "THX",
+      "ASAP"
+    ]
+  },
+  {
+    "id": 235,
+    "term": "RSVP",
+    "fullName": "Répondez S'il Vous Plaît",
+    "category": "日常聊天缩写",
+    "meaning": "请回复（用于邀请函，确认是否参加）",
+    "scene": "周五下午 team building，RSVP by 周三，好统计人数订餐。",
+    "aliases": [
+      "rsvp",
+      "请回复"
+    ],
+    "related": [
+      "EOD",
+      "FYI"
+    ]
+  },
+  {
+    "id": 236,
+    "term": "PSA",
+    "fullName": "Public Service Announcement",
+    "category": "日常聊天缩写",
+    "meaning": "公告/广而告之（温馨提示）",
+    "scene": "PSA：周五晚上 10 点机房维护，所有服务会断 30 分钟，大家提前做好预案。",
+    "aliases": [
+      "psa",
+      "公告"
+    ],
+    "related": [
+      "FYI",
+      "AMA"
+    ]
+  },
+  {
+    "id": 237,
+    "term": "facepalm",
+    "fullName": "facepalm",
+    "category": "日常聊天缩写",
+    "meaning": "捂脸（表达无语/尴尬/哭笑不得）",
+    "scene": "部署完才发现在 staging 环境测的，不是 production……facepalm。",
+    "aliases": [
+      "捂脸"
+    ],
+    "related": [
+      "SMH",
+      "OMG"
+    ]
+  },
+  {
+    "id": 238,
+    "term": "抓手",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "解决问题的关键切入点或手段",
+    "scene": "这个季度的增长抓手是什么？我们要找到核心抓手才能突破瓶颈。",
+    "aliases": [],
+    "related": [
+      "OKR",
+      "KPI",
+      "打法"
+    ],
+    "note": ""
+  },
+  {
+    "id": 239,
+    "term": "赋能",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "赋予能力或资源，让团队/个人更强",
+    "scene": "我们要通过培训赋能一线销售团队，提升转化率。",
+    "aliases": [],
+    "related": [
+      "抓手",
+      "提效"
+    ],
+    "note": ""
+  },
+  {
+    "id": 240,
+    "term": "对齐",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "各方对目标、策略、口径达成一致",
+    "scene": "会前我们先对齐一下数据口径，别让老板觉得我们各说各的。",
+    "aliases": [
+      "拉齐"
+    ],
+    "related": [
+      "sync",
+      "align",
+      "拉通"
+    ],
+    "note": ""
+  },
+  {
+    "id": 241,
+    "term": "拉通",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把不同部门/环节串联起来，消除信息孤岛",
+    "scene": "这个项目需要拉通产研、运营和财务三个团队。",
+    "aliases": [],
+    "related": [
+      "对齐",
+      "串联",
+      "闭环"
+    ],
+    "note": ""
+  },
+  {
+    "id": 242,
+    "term": "闭环",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "从开始到结束形成完整的循环，每个环节都有反馈和收口",
+    "scene": "用户反馈的问题必须有闭环，不能提了就没了。",
+    "aliases": [],
+    "related": [
+      "拉通",
+      "落地",
+      "复盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 243,
+    "term": "颗粒度",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "描述事物的精细程度，越细颗粒度越高",
+    "scene": "你这个方案颗粒度不够，老板要的是具体的执行步骤。",
+    "aliases": [],
+    "related": [
+      "下钻",
+      "落地"
+    ],
+    "note": ""
+  },
+  {
+    "id": 244,
+    "term": "落地",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把策略或计划变成可执行、可看到结果的具体行动",
+    "scene": "想法再好也得落地，先跑个 MVP 验证一下。",
+    "aliases": [
+      "landing"
+    ],
+    "related": [
+      "闭环",
+      "打法"
+    ],
+    "note": ""
+  },
+  {
+    "id": 245,
+    "term": "打法",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "达成目标的策略组合与执行方式",
+    "scene": "竞品换了低价打法，我们的市场打法需要快速调整。",
+    "aliases": [
+      "playbook"
+    ],
+    "related": [
+      "抓手",
+      "策略",
+      "赛道"
+    ],
+    "note": ""
+  },
+  {
+    "id": 246,
+    "term": "复盘",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "对已完成的事件进行系统性回顾分析，提炼经验教训",
+    "scene": "周五下午我们一起复盘这次大促活动，好的坏的都聊。",
+    "aliases": [
+      "retro",
+      "retrospective"
+    ],
+    "related": [
+      "闭环",
+      "方法论"
+    ],
+    "note": ""
+  },
+  {
+    "id": 247,
+    "term": "心智",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "用户对品牌的认知和印象，抢占用户心智=占领用户脑海",
+    "scene": "我们做内容的目的就是抢占用户心智，让用户一想就想到我们。",
+    "aliases": [
+      "mindshare"
+    ],
+    "related": [
+      "打法",
+      "护城河"
+    ],
+    "note": ""
+  },
+  {
+    "id": 248,
+    "term": "下钻",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "从宏观数据逐层深入到微观细节进行分析",
+    "scene": "看到 GMV 下降了，下钻到品类发现是 3C 品类拖了后腿。",
+    "aliases": [
+      "drill down"
+    ],
+    "related": [
+      "颗粒度",
+      "大盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 249,
+    "term": "打透",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把一个点做到极致，产生压倒性效果",
+    "scene": "与其每个渠道都做一点，不如先把抖音这个渠道打透。",
+    "aliases": [],
+    "related": [
+      "落地",
+      "打法",
+      "引爆"
+    ],
+    "note": ""
+  },
+  {
+    "id": 250,
+    "term": "串联",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把独立的事物按逻辑连接起来形成整体",
+    "scene": "把用户从注册到首单的完整路径串联起来，找到流失节点。",
+    "aliases": [],
+    "related": [
+      "拉通",
+      "闭环",
+      "路径"
+    ],
+    "note": ""
+  },
+  {
+    "id": 251,
+    "term": "倒逼",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "通过设定目标或约束条件反向推动前端环节改变",
+    "scene": "用交付时间倒逼开发排期，不设 deadline 永远动不起来。",
+    "aliases": [],
+    "related": [
+      "提效",
+      "闭环"
+    ],
+    "note": ""
+  },
+  {
+    "id": 252,
+    "term": "势能",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "积累的能量/声量，一旦释放产生巨大冲击力",
+    "scene": "品牌势能积累到位了，新品发布直接卖爆。",
+    "aliases": [
+      "momentum"
+    ],
+    "related": [
+      "引爆",
+      "杠杆"
+    ],
+    "note": ""
+  },
+  {
+    "id": 253,
+    "term": "水位",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "指某项指标的基础线/常态值，低于水位需要预警",
+    "scene": "活跃度水位降到 60% 以下必须启动召回策略。",
+    "aliases": [
+      "baseline"
+    ],
+    "related": [
+      "大盘",
+      "存量"
+    ],
+    "note": ""
+  },
+  {
+    "id": 254,
+    "term": "转化",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把流量/用户从当前阶段推进到下一阶段的比例",
+    "scene": "首页到商品详情页的转化率只有 3%，明显不正常。",
+    "aliases": [
+      "conversion",
+      "CVR"
+    ],
+    "related": [
+      "漏斗",
+      "路径",
+      "GMV"
+    ],
+    "note": ""
+  },
+  {
+    "id": 255,
+    "term": "漏斗",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "用户从进入到最后转化的递减模型，形如漏斗",
+    "scene": "注册漏斗：访问 → 点击注册 → 填写信息 → 提交成功，每一步都有流失。",
+    "aliases": [
+      "funnel",
+      "pipeline"
+    ],
+    "related": [
+      "转化",
+      "路径"
+    ],
+    "note": ""
+  },
+  {
+    "id": 256,
+    "term": "路径",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "用户完成一个目标所经过的步骤/页面序列",
+    "scene": "用户下单路径太长，从加购到支付要 5 步，需要简化。",
+    "aliases": [
+      "journey",
+      "flow"
+    ],
+    "related": [
+      "漏斗",
+      "转化",
+      "闭环"
+    ],
+    "note": ""
+  },
+  {
+    "id": 257,
+    "term": "护城河",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "企业的核心竞争壁垒，竞品难以复制的东西",
+    "scene": "我们最大的护城河是供应链能力，不是功能。",
+    "aliases": [
+      "moat"
+    ],
+    "related": [
+      "心智",
+      "壁垒",
+      "生态"
+    ],
+    "note": ""
+  },
+  {
+    "id": 258,
+    "term": "生态",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "企业构建的产品/服务/合作伙伴组成的循环系统",
+    "scene": "苹果的生态让用户换了 iPhone 就很难离开。",
+    "aliases": [
+      "ecosystem"
+    ],
+    "related": [
+      "护城河",
+      "矩阵"
+    ],
+    "note": ""
+  },
+  {
+    "id": 259,
+    "term": "底层逻辑",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "事物最根本的运行规律，穿透表象看本质",
+    "scene": "别看表象，底层逻辑是用户对价格敏感的群体比例在上升。",
+    "aliases": [],
+    "related": [
+      "方法论",
+      "心智"
+    ],
+    "note": ""
+  },
+  {
+    "id": 260,
+    "term": "顶层设计",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "从全局高度对系统架构和战略方向进行整体规划",
+    "scene": "先做顶层设计再拆解任务，否则做着做着就跑偏了。",
+    "aliases": [],
+    "related": [
+      "底层逻辑",
+      "方法论"
+    ],
+    "note": ""
+  },
+  {
+    "id": 261,
+    "term": "方法论",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "一套可复用的分析和解决问题的方法体系",
+    "scene": "做用户研究的核心方法论就是定性+定量双管齐下。",
+    "aliases": [
+      "framework"
+    ],
+    "related": [
+      "底层逻辑",
+      "复盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 262,
+    "term": "矩阵",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "多维度多产品/多账号的体系化布局",
+    "scene": "我们在小红书上做了 5 个号的矩阵，覆盖不同人群。",
+    "aliases": [
+      "matrix"
+    ],
+    "related": [
+      "生态",
+      "打法"
+    ],
+    "note": ""
+  },
+  {
+    "id": 263,
+    "term": "卡位",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "在关键位置/赛道提前占住有利位置",
+    "scene": "要赶在竞品前面卡位 AI 办公这个赛道。",
+    "aliases": [
+      "positioning"
+    ],
+    "related": [
+      "赛道",
+      "对标"
+    ],
+    "note": ""
+  },
+  {
+    "id": 264,
+    "term": "赛道",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "行业或市场的细分竞争领域",
+    "scene": "AI 搜索这条赛道今年能跑出独角兽。",
+    "aliases": [
+      "track"
+    ],
+    "related": [
+      "卡位",
+      "对标"
+    ],
+    "note": ""
+  },
+  {
+    "id": 265,
+    "term": "对标",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "选择参照对象进行对比分析，找出差距和改进方向",
+    "scene": "我们先对标一下行业头部的数据，看看差距在哪里。",
+    "aliases": [
+      "benchmark"
+    ],
+    "related": [
+      "赛道",
+      "复盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 266,
+    "term": "解耦",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把紧密依赖的模块拆分，降低关联性",
+    "scene": "微服务的核心就是把单体应用解耦成多个独立服务。",
+    "aliases": [
+      "decouple"
+    ],
+    "related": [
+      "提效",
+      "串联"
+    ],
+    "note": ""
+  },
+  {
+    "id": 267,
+    "term": "提效",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "提升工作效率，用更少资源做更多事",
+    "scene": "自动化脚本提效了 80%，以前半天的工作现在 10 分钟。",
+    "aliases": [],
+    "related": [
+      "降本增效",
+      "赋能"
+    ],
+    "note": ""
+  },
+  {
+    "id": 268,
+    "term": "降本增效",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "降低成本的同时提升效率，企业经营的核心目标",
+    "scene": "今年大主题就是降本增效，预算砍了 30% 目标还涨了。",
+    "aliases": [],
+    "related": [
+      "提效",
+      "杠杆"
+    ],
+    "note": ""
+  },
+  {
+    "id": 269,
+    "term": "杠杆",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "用小投入撬动大产出的支点",
+    "scene": "做内容是获客的杠杆，一篇爆款带来的用户比投 10 万广告还多。",
+    "aliases": [
+      "leverage"
+    ],
+    "related": [
+      "势能",
+      "提效"
+    ],
+    "note": ""
+  },
+  {
+    "id": 270,
+    "term": "增量",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "新增的市场份额、用户或收入",
+    "scene": "存量见顶了，增量只能靠出海或者下沉市场。",
+    "aliases": [
+      "growth"
+    ],
+    "related": [
+      "存量",
+      "大盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 271,
+    "term": "存量",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "已有的市场份额、用户或收入",
+    "scene": "做存量用户的复购比拉新性价比高得多。",
+    "aliases": [],
+    "related": [
+      "增量",
+      "大盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 272,
+    "term": "大盘",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "整体市场/行业/业务的运行态势",
+    "scene": "大盘在涨但我们没涨，说明我们正在被竞品抢份额。",
+    "aliases": [
+      "market",
+      "overall"
+    ],
+    "related": [
+      "增量",
+      "存量",
+      "水位"
+    ],
+    "note": ""
+  },
+  {
+    "id": 273,
+    "term": "触达",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把信息/产品传递给目标用户",
+    "scene": "Push 的触达率只有 20%，大部分用户关了通知。",
+    "aliases": [
+      "reach",
+      "impression"
+    ],
+    "related": [
+      "转化",
+      "漏斗"
+    ],
+    "note": ""
+  },
+  {
+    "id": 274,
+    "term": "痛点",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "用户在使用过程中最难受、最想解决的那个问题",
+    "scene": "网约车的核心痛点是打不到车，不是便宜。",
+    "aliases": [
+      "pain point"
+    ],
+    "related": [
+      "场景",
+      "心智"
+    ],
+    "note": ""
+  },
+  {
+    "id": 275,
+    "term": "场景",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "用户在什么情况下、出于什么目的使用你的产品",
+    "scene": "我们的目标场景是通勤路上碎片时间学习，不是周末找课。",
+    "aliases": [
+      "scenario",
+      "use case"
+    ],
+    "related": [
+      "痛点",
+      "路径"
+    ],
+    "note": ""
+  },
+  {
+    "id": 276,
+    "term": "ROI",
+    "fullName": "Return on Investment",
+    "category": "职场汇报术语",
+    "meaning": "投资回报率，衡量投入产出比的核心指标",
+    "scene": "这个渠道的 ROI 不到 1.5，投放肯定要停了。",
+    "aliases": [],
+    "related": [
+      "CAC",
+      "LTV",
+      "GMV"
+    ],
+    "note": ""
+  },
+  {
+    "id": 277,
+    "term": "QoQ",
+    "fullName": "Quarter over Quarter",
+    "category": "职场汇报术语",
+    "meaning": "环比增长率，本季度与上季度相比的变化百分比",
+    "scene": "Q2 QoQ 增长 12%，连续三个季度正增长。",
+    "aliases": [],
+    "related": [
+      "YoY",
+      "MoM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 278,
+    "term": "YoY",
+    "fullName": "Year over Year",
+    "category": "职场汇报术语",
+    "meaning": "同比增长率，与去年同期相比的变化百分比",
+    "scene": "Q2 的 YoY 增长 35%，但主要是去年基数太低。",
+    "aliases": [],
+    "related": [
+      "QoQ",
+      "MoM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 279,
+    "term": "MoM",
+    "fullName": "Month over Month",
+    "category": "职场汇报术语",
+    "meaning": "月度环比，本月与上月相比的变化",
+    "scene": "DAU MoM 下降了 3%，可能是开学季效应。",
+    "aliases": [],
+    "related": [
+      "QoQ",
+      "YoY",
+      "WoW"
+    ],
+    "note": ""
+  },
+  {
+    "id": 280,
+    "term": "WoW",
+    "fullName": "Week over Week",
+    "category": "职场汇报术语",
+    "meaning": "周环比，本周与上周相比的变化",
+    "scene": "WoW 活跃度涨了 8%，新版本推送效果明显。",
+    "aliases": [],
+    "related": [
+      "MoM",
+      "QoQ"
+    ],
+    "note": ""
+  },
+  {
+    "id": 281,
+    "term": "CAC",
+    "fullName": "Customer Acquisition Cost",
+    "category": "职场汇报术语",
+    "meaning": "获客成本，获取一个新用户平均花多少钱",
+    "scene": "CAC 已经涨到 80 块了，LTV 才 60，这生意没法做。",
+    "aliases": [],
+    "related": [
+      "LTV",
+      "ROI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 282,
+    "term": "LTV",
+    "fullName": "Lifetime Value",
+    "category": "职场汇报术语",
+    "meaning": "用户生命周期价值，一个用户从来到走总共贡献的收入",
+    "scene": "提高 LTV 的关键是做好留存和复购，不是一直拉新。",
+    "aliases": [
+      "LTV"
+    ],
+    "related": [
+      "CAC",
+      "ROI",
+      "ARPU"
+    ],
+    "note": ""
+  },
+  {
+    "id": 283,
+    "term": "ARPU",
+    "fullName": "Average Revenue Per User",
+    "category": "职场汇报术语",
+    "meaning": "每用户平均收入，ARPU 越高说明用户付费能力越强",
+    "scene": "ARPU 从 30 涨到 45，说明我们新上的会员体系起作用了。",
+    "aliases": [],
+    "related": [
+      "LTV",
+      "GMV"
+    ],
+    "note": ""
+  },
+  {
+    "id": 284,
+    "term": "MAU",
+    "fullName": "Monthly Active Users",
+    "category": "职场汇报术语",
+    "meaning": "月活跃用户数，衡量产品健康度的核心指标",
+    "scene": "MAU 突破 500 万了，但 DAU/MAU 比还不到 30%。",
+    "aliases": [],
+    "related": [
+      "DAU",
+      "大盘"
+    ],
+    "note": ""
+  },
+  {
+    "id": 285,
+    "term": "DAU",
+    "fullName": "Daily Active Users",
+    "category": "职场汇报术语",
+    "meaning": "日活跃用户数，反映产品当日用户规模",
+    "scene": "新版本上线后 DAU 涨了 15%，看来改版方向对了。",
+    "aliases": [],
+    "related": [
+      "MAU",
+      "WoW"
+    ],
+    "note": ""
+  },
+  {
+    "id": 286,
+    "term": "GMV",
+    "fullName": "Gross Merchandise Volume",
+    "category": "职场汇报术语",
+    "meaning": "商品交易总额，电商核心业绩指标",
+    "scene": "双十一当天 GMV 破了 10 亿，但退款率也创了新高。",
+    "aliases": [],
+    "related": [
+      "ROI",
+      "ARPU",
+      "转化"
+    ],
+    "note": ""
+  },
+  {
+    "id": 287,
+    "term": "NPS",
+    "fullName": "Net Promoter Score",
+    "category": "职场汇报术语",
+    "meaning": "净推荐值，衡量用户忠诚度，问用户愿不愿意把产品推荐给朋友",
+    "scene": "NPS 从 30 跌到 15 了，说明老用户对我们越来越不满意。",
+    "aliases": [],
+    "related": [
+      "ROI",
+      "痛点"
+    ],
+    "note": ""
+  },
+  {
+    "id": 288,
+    "term": "P&L",
+    "fullName": "Profit and Loss",
+    "category": "职场汇报术语",
+    "meaning": "损益表，展示收入、成本和利润的财务报表",
+    "scene": "每个 BU 独立核算 P&L，亏钱的业务三个月内必须扭亏。",
+    "aliases": [
+      "PNL"
+    ],
+    "related": [
+      "ROI",
+      "降本增效"
+    ],
+    "note": ""
+  },
+  {
+    "id": 289,
+    "term": "OKR",
+    "fullName": "Objectives and Key Results",
+    "category": "职场汇报术语",
+    "meaning": "目标与关键结果，目标管理工具",
+    "scene": "Q2 的 OKR 定了三个 O，每个 O 配 2-3 个 KR。",
+    "aliases": [],
+    "related": [
+      "KPI",
+      "对齐"
+    ],
+    "note": ""
+  },
+  {
+    "id": 290,
+    "term": "KPI",
+    "fullName": "Key Performance Indicator",
+    "category": "职场汇报术语",
+    "meaning": "关键绩效指标，最普遍的量化考核工具",
+    "scene": "KPI 全绿不代表做得好，可能是指标定得太保守了。",
+    "aliases": [],
+    "related": [
+      "OKR",
+      "ROI",
+      "NPS"
+    ],
+    "note": ""
+  },
+  {
+    "id": 291,
+    "term": "同步",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "把信息传递给需要知道的人",
+    "scene": "我先同步一下项目进展，大家有问题随时打断我。",
+    "aliases": [
+      "sync"
+    ],
+    "related": [
+      "对齐",
+      "触达",
+      "ping"
+    ],
+    "note": ""
+  },
+  {
+    "id": 292,
+    "term": "context",
+    "fullName": "",
+    "category": "职场汇报术语",
+    "meaning": "做一件事或做决策的背景和前置信息",
+    "scene": "先给个 context，这个项目是 CEO 亲自立的，所以优先级很高。",
+    "aliases": [],
+    "related": [
+      "对齐",
+      "同步"
+    ],
+    "note": ""
+  },
+  {
+    "id": 293,
+    "term": "FYI",
+    "fullName": "For Your Information",
+    "category": "商务邮件缩写",
+    "meaning": "供你参考，不需要回复或行动",
+    "scene": "FYI，附上是本月的数据报表，有问题随时找我。",
+    "aliases": [],
+    "related": [
+      "FYR",
+      "FYI&NA",
+      "NRN"
+    ],
+    "note": ""
+  },
+  {
+    "id": 294,
+    "term": "FYR",
+    "fullName": "For Your Reference",
+    "category": "商务邮件缩写",
+    "meaning": "供参考，类似 FYI 但更偏向提供参考资料",
+    "scene": "FYR 我整理了一份竞品分析，里面有详细的功能对比表格。",
+    "aliases": [],
+    "related": [
+      "FYI",
+      "PFA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 295,
+    "term": "FYA",
+    "fullName": "For Your Action",
+    "category": "商务邮件缩写",
+    "meaning": "需要你采取行动，对方看完邮件要做事",
+    "scene": "FYA：客户反馈了三个 bug，请在周五前全部修复并回复。",
+    "aliases": [],
+    "related": [
+      "FYI",
+      "AB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 296,
+    "term": "FYI&NA",
+    "fullName": "For Your Information & No Action",
+    "category": "商务邮件缩写",
+    "meaning": "仅供参考无需行动，比 FYI 更明确说不用动",
+    "scene": "FYI&NA，会议纪要已存档，不需要你做什么。",
+    "aliases": [],
+    "related": [
+      "FYI",
+      "NRN"
+    ],
+    "note": ""
+  },
+  {
+    "id": 297,
+    "term": "ASAP",
+    "fullName": "As Soon As Possible",
+    "category": "商务邮件缩写",
+    "meaning": "尽快，通常带有紧迫感但不是立即",
+    "scene": "客户要 ASK 我们下周能不能交付，请 ASAP 给我一个排期答复。",
+    "aliases": [],
+    "related": [
+      "COB",
+      "EOD",
+      "AB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 298,
+    "term": "EOD",
+    "fullName": "End of Day",
+    "category": "商务邮件缩写",
+    "meaning": "今天下班前完成",
+    "scene": "方案 EOD 前发到群里，我晚上回来给 feedback。",
+    "aliases": [],
+    "related": [
+      "COB",
+      "EOW",
+      "ASAP"
+    ],
+    "note": ""
+  },
+  {
+    "id": 299,
+    "term": "COB",
+    "fullName": "Close of Business",
+    "category": "商务邮件缩写",
+    "meaning": "下班前（相当于 EOD，更正式）",
+    "scene": "请在 COB 前提交本周工作周报，HR 系统会自动汇总。",
+    "aliases": [],
+    "related": [
+      "EOD",
+      "EOW"
+    ],
+    "note": ""
+  },
+  {
+    "id": 300,
+    "term": "EOW",
+    "fullName": "End of Week",
+    "category": "商务邮件缩写",
+    "meaning": "本周结束前",
+    "scene": "EOW 前需要完成所有测试用例的评审。",
+    "aliases": [],
+    "related": [
+      "EOD",
+      "COB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 301,
+    "term": "TBA",
+    "fullName": "To Be Announced",
+    "category": "商务邮件缩写",
+    "meaning": "待通知，时间/地点/人选还没定但快了",
+    "scene": "下季度 All-Hands 时间 TBA，应该会在下周发日历邀请。",
+    "aliases": [],
+    "related": [
+      "TBD",
+      "ETA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 302,
+    "term": "TBD",
+    "fullName": "To Be Determined",
+    "category": "商务邮件缩写",
+    "meaning": "待定，还没决定",
+    "scene": "新办公室选址 TBD，还在跟物业谈价格。",
+    "aliases": [],
+    "related": [
+      "TBA",
+      "ETA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 303,
+    "term": "ETA",
+    "fullName": "Estimated Time of Arrival",
+    "category": "商务邮件缩写",
+    "meaning": "预计到达/完成时间",
+    "scene": "新版本的 ETA 是下周三，不出意外的话。",
+    "aliases": [],
+    "related": [
+      "TBD",
+      "EOD",
+      "ASAP"
+    ],
+    "note": ""
+  },
+  {
+    "id": 304,
+    "term": "WFH",
+    "fullName": "Work From Home",
+    "category": "商务邮件缩写",
+    "meaning": "居家办公，邮件和个人签名里常用",
+    "scene": "周五 WFH，有事可以直接打我手机或者在 Slack 上找我。",
+    "aliases": [
+      "WFM"
+    ],
+    "related": [
+      "OOO",
+      "PTO"
+    ],
+    "note": ""
+  },
+  {
+    "id": 305,
+    "term": "OOO",
+    "fullName": "Out of Office",
+    "category": "商务邮件缩写",
+    "meaning": "不在办公室/休假，通常配合自动回复",
+    "scene": "6 月 10-15 日 OOO 在休假，紧急事项请联系我的 back-up。",
+    "aliases": [
+      "OOTO"
+    ],
+    "related": [
+      "WFH",
+      "PTO",
+      "SFLR"
+    ],
+    "note": ""
+  },
+  {
+    "id": 306,
+    "term": "OOTO",
+    "fullName": "Out of the Office",
+    "category": "商务邮件缩写",
+    "meaning": "不在办公室（OOO 的变体）",
+    "scene": "OOTO until June 20th. Will respond upon return.",
+    "aliases": [],
+    "related": [
+      "OOO",
+      "PTO"
+    ],
+    "note": ""
+  },
+  {
+    "id": 307,
+    "term": "PTO",
+    "fullName": "Paid Time Off",
+    "category": "商务邮件缩写",
+    "meaning": "带薪休假",
+    "scene": "I'll be on PTO from Monday to Friday next week.",
+    "aliases": [],
+    "related": [
+      "OOO",
+      "OOTO",
+      "WFH"
+    ],
+    "note": ""
+  },
+  {
+    "id": 308,
+    "term": "CC",
+    "fullName": "Carbon Copy",
+    "category": "商务邮件缩写",
+    "meaning": "抄送，让某人知晓但不要求其回复",
+    "scene": "请把法务 CC 进来，这个合作涉及合规审查。",
+    "aliases": [],
+    "related": [
+      "BCC",
+      "FYI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 309,
+    "term": "BCC",
+    "fullName": "Blind Carbon Copy",
+    "category": "商务邮件缩写",
+    "meaning": "密送，收件人看不到 BCC 了谁。大批量发邮件时常用",
+    "scene": "群发通知客户的时候记得 BCC，别让所有人看到彼此的邮箱。",
+    "aliases": [],
+    "related": [
+      "CC"
+    ],
+    "note": ""
+  },
+  {
+    "id": 310,
+    "term": "NRN",
+    "fullName": "No Reply Needed",
+    "category": "商务邮件缩写",
+    "meaning": "无需回复，告知性邮件的标记",
+    "scene": "NRN，只是同步一下会议结论，大家可以看完就存档。",
+    "aliases": [],
+    "related": [
+      "FYI&NA",
+      "FYI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 311,
+    "term": "AB",
+    "fullName": "Action By",
+    "category": "商务邮件缩写",
+    "meaning": "需要某人在指定时间前完成操作",
+    "scene": "AB 周三 — PM 需要给出最终排期，周四给客户汇报要用。",
+    "aliases": [],
+    "related": [
+      "FYA",
+      "PRB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 312,
+    "term": "PRB",
+    "fullName": "Please Reply By",
+    "category": "商务邮件缩写",
+    "meaning": "请在某个时间点前回复",
+    "scene": "PRB Friday noon — 确认你是否参加下周的 workshop。",
+    "aliases": [],
+    "related": [
+      "AB",
+      "RSVP"
+    ],
+    "note": ""
+  },
+  {
+    "id": 313,
+    "term": "RSVP",
+    "fullName": "Répondez s'il vous plaît",
+    "category": "商务邮件缩写",
+    "meaning": "请回复（法语缩写，用于邀请函）",
+    "scene": "年会邀请已发出，请 RSVP 以便行政统计人数安排餐食。",
+    "aliases": [],
+    "related": [
+      "PRB",
+      "TBA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 314,
+    "term": "PFA",
+    "fullName": "Please Find Attached",
+    "category": "商务邮件缩写",
+    "meaning": "请查收附件，外企邮件最常见开头",
+    "scene": "PFA 本月的销售数据报告，第二页有我标注的关键发现。",
+    "aliases": [],
+    "related": [
+      "PFB",
+      "FYR"
+    ],
+    "note": ""
+  },
+  {
+    "id": 315,
+    "term": "PFB",
+    "fullName": "Please Find Below",
+    "category": "商务邮件缩写",
+    "meaning": "请查看以下内容（邮件正文中直接放了关键信息）",
+    "scene": "PFB the meeting minutes from today's review session.",
+    "aliases": [],
+    "related": [
+      "PFA",
+      "FYR"
+    ],
+    "note": ""
+  },
+  {
+    "id": 316,
+    "term": "NFA",
+    "fullName": "No Further Action",
+    "category": "商务邮件缩写",
+    "meaning": "无需进一步操作，项目/任务已完结",
+    "scene": "这个工单已解决，NFA。如果用户再次反馈同样问题直接重开。",
+    "aliases": [],
+    "related": [
+      "NRN",
+      "FYI&NA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 317,
+    "term": "FAO",
+    "fullName": "For the Attention Of",
+    "category": "商务邮件缩写",
+    "meaning": "致某人（指定邮件的目标阅读人）",
+    "scene": "FAO：市场部负责人 — 附件是关于 Q3 推广计划的预算审批。",
+    "aliases": [],
+    "related": [
+      "FYA",
+      "AB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 318,
+    "term": "WRT",
+    "fullName": "With Regard To",
+    "category": "商务邮件缩写",
+    "meaning": "关于/就某件事而言",
+    "scene": "WRT 上周提到的预算问题，财务已经批了。",
+    "aliases": [
+      "re"
+    ],
+    "related": [
+      "RE",
+      "FYI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 319,
+    "term": "NB",
+    "fullName": "Nota Bene",
+    "category": "商务邮件缩写",
+    "meaning": "请注意/注意以下（源自拉丁语）",
+    "scene": "NB：本次报价不含税，物流费用按实际结算。",
+    "aliases": [],
+    "related": [
+      "PS",
+      "WRT"
+    ],
+    "note": ""
+  },
+  {
+    "id": 320,
+    "term": "PS",
+    "fullName": "Post Scriptum",
+    "category": "商务邮件缩写",
+    "meaning": "附言，正文后追加的补充说明",
+    "scene": "PS：刚才说的那个数据，我找到原始报告了，附在邮件里。",
+    "aliases": [],
+    "related": [
+      "NB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 321,
+    "term": "TIA",
+    "fullName": "Thanks In Advance",
+    "category": "商务邮件缩写",
+    "meaning": "提前感谢，常用于请求帮助时",
+    "scene": "能帮忙 review 一下这个 PR 吗？TIA！",
+    "aliases": [],
+    "related": [
+      "BR",
+      "HTH"
+    ],
+    "note": ""
+  },
+  {
+    "id": 322,
+    "term": "HTH",
+    "fullName": "Hope This Helps",
+    "category": "商务邮件缩写",
+    "meaning": "希望有用/帮到你",
+    "scene": "这是你要的那个竞品资料库地址，HTH！",
+    "aliases": [],
+    "related": [
+      "TIA",
+      "BR"
+    ],
+    "note": ""
+  },
+  {
+    "id": 323,
+    "term": "BR",
+    "fullName": "Best Regards",
+    "category": "商务邮件缩写",
+    "meaning": "祝好/此致敬礼，邮件结尾最常用",
+    "scene": "Looking forward to your feedback. BR, Zhang Wei",
+    "aliases": [
+      "Rgds"
+    ],
+    "related": [
+      "TIA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 324,
+    "term": "AK",
+    "fullName": "Acknowledged",
+    "category": "商务邮件缩写",
+    "meaning": "收到/已知悉，简短确认收到信息",
+    "scene": "AK，邮件收到，我这边处理完再更新你。",
+    "aliases": [],
+    "related": [
+      "NRN"
+    ],
+    "note": ""
+  },
+  {
+    "id": 325,
+    "term": "LET",
+    "fullName": "Leaving Early Today",
+    "category": "商务邮件缩写",
+    "meaning": "今天早走/提前下班",
+    "scene": "LET — 今天小孩学校有活动要早走，紧急事打我手机。",
+    "aliases": [],
+    "related": [
+      "OOO",
+      "WFH"
+    ],
+    "note": ""
+  },
+  {
+    "id": 326,
+    "term": "SFLR",
+    "fullName": "Sorry For Late Reply",
+    "category": "商务邮件缩写",
+    "meaning": "抱歉回复晚了，迟到回复的礼貌开头",
+    "scene": "SFLR，上周在出差没能及时看邮件，你的方案我这边 OK。",
+    "aliases": [],
+    "related": [
+      "OOO",
+      "BR"
+    ],
+    "note": ""
+  },
+  {
+    "id": 327,
+    "term": "EOM",
+    "fullName": "End of Message",
+    "category": "商务邮件缩写",
+    "meaning": "消息结束（写在邮件标题里表示标题就是全文）",
+    "scene": "标题：会议室 301 下午两点空出来了（EOM）",
+    "aliases": [],
+    "related": [
+      "NRN",
+      "FYI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 328,
+    "term": "TL;DR",
+    "fullName": "Too Long; Didn't Read",
+    "category": "商务邮件缩写",
+    "meaning": "太长不看的摘要，在长邮件开头用一两句概括",
+    "scene": "TL;DR：测试结果没问题，可以上线。以下是详细的数据和分析。",
+    "aliases": [],
+    "related": [
+      "EOM",
+      "FYI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 329,
+    "term": "JK",
+    "fullName": "Just Kidding",
+    "category": "日常聊天缩写",
+    "meaning": "开玩笑的/逗你的",
+    "scene": "你说你被开了？JK，别吓我！",
+    "aliases": [],
+    "related": [
+      "LOL",
+      "NVM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 330,
+    "term": "GTG",
+    "fullName": "Got To Go",
+    "category": "日常聊天缩写",
+    "meaning": "得走了/先下了",
+    "scene": "GTG 开会了，晚点再聊！",
+    "aliases": [],
+    "related": [
+      "BRB",
+      "AFK",
+      "TTYL"
+    ],
+    "note": ""
+  },
+  {
+    "id": 331,
+    "term": "TTYL",
+    "fullName": "Talk To You Later",
+    "category": "日常聊天缩写",
+    "meaning": "回头聊/晚点再说",
+    "scene": "马上登机了，TTYL！",
+    "aliases": [],
+    "related": [
+      "GTG",
+      "BRB",
+      "BB"
+    ],
+    "note": ""
+  },
+  {
+    "id": 332,
+    "term": "IMO",
+    "fullName": "In My Opinion",
+    "category": "日常聊天缩写",
+    "meaning": "在我看来/我认为",
+    "scene": "IMO 这个方案比上一个好多了，但还需要打磨细节。",
+    "aliases": [],
+    "related": [
+      "IMHO",
+      "TBH",
+      "NGL"
+    ],
+    "note": ""
+  },
+  {
+    "id": 333,
+    "term": "IMHO",
+    "fullName": "In My Humble Opinion",
+    "category": "日常聊天缩写",
+    "meaning": "以我的浅见/个人认为（比 IMO 更谦虚）",
+    "scene": "IMHO，这个设计对用户来说门槛太高了。",
+    "aliases": [],
+    "related": [
+      "IMO",
+      "TBH",
+      "AFAIK"
+    ],
+    "note": ""
+  },
+  {
+    "id": 334,
+    "term": "TBF",
+    "fullName": "To Be Fair",
+    "category": "日常聊天缩写",
+    "meaning": "公平地说/客观来说",
+    "scene": "TBF，他虽然 bug 多但速度快，每次都能按时交付。",
+    "aliases": [],
+    "related": [
+      "TBH",
+      "IMO",
+      "NGL"
+    ],
+    "note": ""
+  },
+  {
+    "id": 335,
+    "term": "ICYMI",
+    "fullName": "In Case You Missed It",
+    "category": "日常聊天缩写",
+    "meaning": "怕你错过/以防你没看到",
+    "scene": "ICYMI：老板刚才在群里发了红包，快去领！",
+    "aliases": [],
+    "related": [
+      "FYI",
+      "PSA"
+    ],
+    "note": ""
+  },
+  {
+    "id": 336,
+    "term": "HMU",
+    "fullName": "Hit Me Up",
+    "category": "日常聊天缩写",
+    "meaning": "找我/联系我",
+    "scene": "周末如果无聊的话 HMU，一起打游戏。",
+    "aliases": [],
+    "related": [
+      "DM",
+      "GTG"
+    ],
+    "note": ""
+  },
+  {
+    "id": 337,
+    "term": "JIC",
+    "fullName": "Just In Case",
+    "category": "日常聊天缩写",
+    "meaning": "以防万一/有备无患",
+    "scene": "JIC 你忘了，我再说一遍：明天 9 点会议室 302。",
+    "aliases": [],
+    "related": [
+      "FYI",
+      "ICYMI"
+    ],
+    "note": ""
+  },
+  {
+    "id": 338,
+    "term": "WDYM",
+    "fullName": "What Do You Mean",
+    "category": "日常聊天缩写",
+    "meaning": "你什么意思？/你想表达什么？",
+    "scene": "你说这个设计\"不够好\"？WDYM？能具体说说吗？",
+    "aliases": [],
+    "related": [
+      "IDK",
+      "IKR"
+    ],
+    "note": ""
+  },
+  {
+    "id": 339,
+    "term": "TYT",
+    "fullName": "Take Your Time",
+    "category": "日常聊天缩写",
+    "meaning": "不急/慢慢来",
+    "scene": "TYT，质量比速度重要，周五前给就行。",
+    "aliases": [],
+    "related": [
+      "NP",
+      "GTG"
+    ],
+    "note": ""
+  },
+  {
+    "id": 340,
+    "term": "RN",
+    "fullName": "Right Now",
+    "category": "日常聊天缩写",
+    "meaning": "现在/此时此刻",
+    "scene": "I'm so busy RN，等下回你。",
+    "aliases": [],
+    "related": [
+      "ASAP",
+      "GTG"
+    ],
+    "note": ""
+  },
+  {
+    "id": 341,
+    "term": "OFC",
+    "fullName": "Of Course",
+    "category": "日常聊天缩写",
+    "meaning": "当然/肯定的",
+    "scene": "OFC 你可以用我的代码，本来就是开源项目。",
+    "aliases": [],
+    "related": [
+      "NP",
+      "YW"
+    ],
+    "note": ""
+  },
+  {
+    "id": 342,
+    "term": "LMK",
+    "fullName": "Let Me Know",
+    "category": "日常聊天缩写",
+    "meaning": "告诉我/跟我说一声",
+    "scene": "如果决定好了 LMK，我好安排后面的计划。",
+    "aliases": [],
+    "related": [
+      "HMU",
+      "DM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 343,
+    "term": "TMI",
+    "fullName": "Too Much Information",
+    "category": "日常聊天缩写",
+    "meaning": "信息量太大了/说太多了（常带调侃意味）",
+    "scene": "你跟我讲你的约会细节？TMI，我不想听！",
+    "aliases": [],
+    "related": [
+      "LOL",
+      "NVM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 344,
+    "term": "TFW",
+    "fullName": "That Feeling When",
+    "category": "日常聊天缩写",
+    "meaning": "当你……的那种感觉（配图/讲感受时用）",
+    "scene": "TFW 周五下午 5 点发现还有一个 bug 没改完。",
+    "aliases": [],
+    "related": [
+      "MFW",
+      "LOL",
+      "facepalm"
+    ],
+    "note": ""
+  },
+  {
+    "id": 345,
+    "term": "MFW",
+    "fullName": "My Face When",
+    "category": "日常聊天缩写",
+    "meaning": "当我看到……时的表情（同样用于配图）",
+    "scene": "MFW 客户说\"这个需求很简单\"。",
+    "aliases": [],
+    "related": [
+      "TFW",
+      "facepalm",
+      "SMH"
+    ],
+    "note": ""
+  },
+  {
+    "id": 346,
+    "term": "IRL",
+    "fullName": "In Real Life",
+    "category": "日常聊天缩写",
+    "meaning": "在现实中（区别网络世界）",
+    "scene": "他网上嘴炮很厉害，但 IRL 是个特别安静的人。",
+    "aliases": [],
+    "related": [
+      "AFK",
+      "OP"
+    ],
+    "note": ""
+  },
+  {
+    "id": 347,
+    "term": "OP",
+    "fullName": "Original Poster",
+    "category": "日常聊天缩写",
+    "meaning": "楼主/原帖作者",
+    "scene": "OP 提的问题很好，我补充一下我的看法。",
+    "aliases": [
+      "原作者"
+    ],
+    "related": [
+      "IRL",
+      "DM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 348,
+    "term": "FTFY",
+    "fullName": "Fixed That For You",
+    "category": "日常聊天缩写",
+    "meaning": "帮你修正了（带幽默或讽刺意味）",
+    "scene": "\"我们这个项目只需要一个月\" — FTFY：\"需要三个月\"",
+    "aliases": [],
+    "related": [
+      "LOL",
+      "NGL"
+    ],
+    "note": ""
+  },
+  {
+    "id": 349,
+    "term": "FWIW",
+    "fullName": "For What It's Worth",
+    "category": "日常聊天缩写",
+    "meaning": "不管有没有用，说出来仅供参考",
+    "scene": "FWIW，我觉得这个颜色在深色模式下不太好看。",
+    "aliases": [],
+    "related": [
+      "IMO",
+      "TBH",
+      "AFAIK"
+    ],
+    "note": ""
+  },
+  {
+    "id": 350,
+    "term": "IIRC",
+    "fullName": "If I Recall Correctly",
+    "category": "日常聊天缩写",
+    "meaning": "如果我没记错的话",
+    "scene": "IIRC，这个 bug 是三个月前修过的，怎么又回来了？",
+    "aliases": [],
+    "related": [
+      "AFAIK",
+      "IMO"
+    ],
+    "note": ""
+  },
+  {
+    "id": 351,
+    "term": "FTW",
+    "fullName": "For The Win",
+    "category": "日常聊天缩写",
+    "meaning": "超棒的/顶级的/无敌了",
+    "scene": "周五下午放假 FTW！终于可以睡个懒觉了。",
+    "aliases": [],
+    "related": [
+      "GOAT",
+      "LOL"
+    ],
+    "note": ""
+  },
+  {
+    "id": 352,
+    "term": "BFF",
+    "fullName": "Best Friends Forever",
+    "category": "日常聊天缩写",
+    "meaning": "闺蜜/最好的朋友",
+    "scene": "我和她 BFF 八年了，什么都能聊。",
+    "aliases": [],
+    "related": [
+      "IRL",
+      "DM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 353,
+    "term": "IDC",
+    "fullName": "I Don't Care",
+    "category": "日常聊天缩写",
+    "meaning": "我不在乎/随便",
+    "scene": "IDC 去哪里吃，你定就行。",
+    "aliases": [],
+    "related": [
+      "IDK",
+      "NVM"
+    ],
+    "note": ""
+  },
+  {
+    "id": 354,
+    "term": "ISTG",
+    "fullName": "I Swear To God",
+    "category": "日常聊天缩写",
+    "meaning": "我发誓/我真的",
+    "scene": "ISTG 如果这次再延期，我就把手机砸了。",
+    "aliases": [
+      "ISTFG"
+    ],
+    "related": [
+      "FR",
+      "NGL",
+      "OMG"
+    ],
+    "note": ""
+  }
+]
