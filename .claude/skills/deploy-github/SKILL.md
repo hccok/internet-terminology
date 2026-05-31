@@ -36,8 +36,7 @@ git branch -M main
 git push -u origin main
 
 # 3. 构建
-npm --prefix . run build
-# 或: npm run build
+npm run build
 
 # 4. 推送构建产物到 gh-pages 分支
 TMPDIR="/tmp/gh-pages-deploy"
